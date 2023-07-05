@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Khand';
+        src: url(./fonts/Khand-Variable.ttf);
+    }
+    @font-face {
+        font-family: 'Switzer';
+        src: url(./fonts/Switzer-Variable.ttf);
+    }
+  }
+  
