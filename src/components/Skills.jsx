@@ -1,6 +1,7 @@
 import React from "react";
 import { easeInOut, motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import { Link } from "react-scroll";
 import htmlIcon from "../assets/icons/html-5.png";
 import cssIcon from "../assets/icons/css-3.png";
 import jsIcon from "../assets/icons/js.png";
@@ -123,7 +124,7 @@ const Skills = () => {
                 applications that provide exceptional user experiences.
               </h3>
               {/* icons */}
-              <div className="grid grid-cols-5 gap-1 sm:gap-3 mx-auto lg:mx-0 w-fit mb-4">
+              <div className="grid grid-cols-5 gap-1 sm:gap-3 mx-auto lg:mx-0 w-fit mb-6">
                 {icons.map((items, index) => {
                   return (
                     <motion.li
@@ -149,12 +150,15 @@ const Skills = () => {
                 })}
               </div>
               {/* button */}
-              <button
+              <Link
                 className="bg-btn-color text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-bold rounded-sm p-2 
                                 duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px]"
+                smooth={true}
+                duration={300}
+                to="projects"
               >
                 See my projects
-              </button>
+              </Link>
             </motion.div>
             {/* skills */}
             <div className="h-full lg:h-[60%] w-full max-w-[400px] lg:max-w-[600px] lg:overflow-y-scroll lg:cursor-pointer [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
