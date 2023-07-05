@@ -1,6 +1,6 @@
 import React from "react";
 
-const Cards = ({ name, description, src, icons }) => {
+const Cards = ({ name, description, src, srcPages, icons }) => {
   return (
     <>
       <div
@@ -36,13 +36,12 @@ const Cards = ({ name, description, src, icons }) => {
         </div>
         <div className="absolute -bottom-full right-8 group-hover:bottom-[7%] transition-all duration-700 z-50">
           <a
-            // href="#"
-            onClick={() => alert("Not yet implmented!")}
+            href={srcPages}
             target="_blank"
             className="text-paragraph cursor-pointer hover:bg-paragraph underline underline-offset-[12px] hover:no-underline text-md font-khand font-bold rounded-sm p-2 
                           duration-200 ease-in hover:text-btn-text-color hover:shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px]"
           >
-            View in GitHub
+            View in GitHub Pages
           </a>
         </div>
       </div>

@@ -3,17 +3,33 @@ import { easeInOut, motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import { Link } from "react-scroll";
 import fashionStep from "../assets/projects/fashion-step.gif";
+import colorFill from "../assets/projects/colorFill.gif";
 import markdown from "../assets/projects/markdown.gif";
 import quoteGenerator from "../assets/projects/quote-generator.png";
+import calculator from "../assets/projects/calculator.png";
+import miniDrum from "../assets/projects/mini-drum.png";
+import padoromo from "../assets/projects/padoromo-clock.png";
 import reactIcon from "../assets/icons/react.png";
 import tailWindIcon from "../assets/icons/tailwind.png";
-import viteIcon from "../assets/icons/vite.svg";
+import htmlIcon from "../assets/icons/html-5.png";
+import jsIcon from "../assets/icons/js.png";
+import javaIcon from "../assets/icons/java.png";
+import pythonIcon from "../assets/icons/python.png";
+import cssIcon from "../assets/icons/css-3.png";
 import Cards from "./Cards";
 
 const icons = [
   {
-    name: "Vite",
-    src: viteIcon,
+    name: "HTML",
+    src: htmlIcon,
+  },
+  {
+    name: "CSS",
+    src: cssIcon,
+  },
+  {
+    name: "JavaScript",
+    src: jsIcon,
   },
   {
     name: "React",
@@ -23,10 +39,24 @@ const icons = [
     name: "Tailwind CSS",
     src: tailWindIcon,
   },
+  {
+    name: "Java",
+    src: javaIcon,
+  },
+  {
+    name: "Python",
+    src: pythonIcon,
+  },
 ];
 
 const Projects = () => {
   const [isHidden, setIsHidden] = useState(false);
+
+  const getIcons = (names) => {
+    const items = icons.filter((item) => names.includes(item.name));
+    return items;
+  };
+
   return (
     <section id="projects" className="w-screen bg-paragraph text-bg-color">
       <div className="w-full max-w-[1240px] lg:min-h-screen py-8 mx-auto px-6 font-khand flex justify-between items-center">
@@ -75,7 +105,13 @@ const Projects = () => {
                 name="Fashion Step"
                 description="A shoes shop webstite template."
                 src={fashionStep}
-                icons={icons}
+                srcPages="https://rvnrngl.github.io/fashion-step-website/"
+                icons={getIcons([
+                  "HTML",
+                  "JavaScript",
+                  "React",
+                  "Tailwind CSS",
+                ])}
               />
             </motion.div>
             <motion.div
@@ -86,16 +122,18 @@ const Projects = () => {
               className="flex flex-col gap-y-10 max-w-[400px] lg:max-w-[500px]"
             >
               <Cards
-                name="MarkDown Previewer"
-                description="A simple markdown previewer website."
-                src={markdown}
-                icons={icons}
+                name="ColorFill"
+                description="An android-based Color Blind Simulator App."
+                src={colorFill}
+                srcPages="https://github.com/rvnrngl/ColorFill-App"
+                icons={getIcons(["Java", "Python"])}
               />
               <Cards
                 name="Quote Machine Generator"
                 description="A website that generates random quotes."
                 src={quoteGenerator}
-                icons={icons}
+                srcPages="https://rvnrngl.github.io/random-quote-machine/"
+                icons={getIcons(["HTML", "CSS", "JavaScript", "React"])}
               />
             </motion.div>
           </div>
@@ -116,10 +154,16 @@ const Projects = () => {
                 className="col-span-2 lg:col-span-1"
               >
                 <Cards
-                  name="MarkDown Previewer"
-                  description="A simple markdown previewer website."
-                  src={markdown}
-                  icons={icons}
+                  name="Calculator"
+                  description="An Ios clone calculator app."
+                  src={calculator}
+                  srcPages="https://rvnrngl.github.io/simple-calculator/"
+                  icons={getIcons([
+                    "HTML",
+                    "JavaScript",
+                    "React",
+                    "Tailwind CSS",
+                  ])}
                 />
               </motion.div>
               <motion.div
@@ -130,10 +174,16 @@ const Projects = () => {
                 className="col-span-2 lg:col-span-1"
               >
                 <Cards
-                  name="MarkDown Previewer"
-                  description="A simple markdown previewer website."
-                  src={markdown}
-                  icons={icons}
+                  name="Mini Drum"
+                  description="A simple mini drum machine app."
+                  src={miniDrum}
+                  srcPages="https://rvnrngl.github.io/mini-drum-machine/"
+                  icons={getIcons([
+                    "HTML",
+                    "JavaScript",
+                    "React",
+                    "Tailwind CSS",
+                  ])}
                 />
               </motion.div>
               <motion.div
@@ -144,10 +194,16 @@ const Projects = () => {
                 className="col-span-2 lg:col-span-1"
               >
                 <Cards
-                  name="MarkDown Previewer"
-                  description="A simple markdown previewer website."
-                  src={markdown}
-                  icons={icons}
+                  name="Padoromo Clock"
+                  description="A simple session and break time clock."
+                  src={padoromo}
+                  srcPages="https://rvnrngl.github.io/padoromo-clock/"
+                  icons={getIcons([
+                    "HTML",
+                    "JavaScript",
+                    "React",
+                    "Tailwind CSS",
+                  ])}
                 />
               </motion.div>
               <motion.div
@@ -161,7 +217,8 @@ const Projects = () => {
                   name="MarkDown Previewer"
                   description="A simple markdown previewer website."
                   src={markdown}
-                  icons={icons}
+                  srcPages="https://rvnrngl.github.io/markdown-previewer/"
+                  icons={getIcons(["HTML", "CSS", "JavaScript", "React"])}
                 />
               </motion.div>
               <Link

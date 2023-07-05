@@ -16,7 +16,7 @@ const Contact = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1"
+            className="flex-1 lg:max-w-[500px]"
           >
             <div className=" flex flex-col justify-center items-center lg:items-start">
               <h3 className=" text-[#e16162] text-md md:text-2xl uppercase font-semibold">
