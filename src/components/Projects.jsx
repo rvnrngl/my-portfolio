@@ -71,7 +71,7 @@ const Projects = () => {
             >
               {/* headlines */}
               <div className="max-w-[400px] lg:max-w-[500px] h-[267.5px] flex flex-col justify-center items-start">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl text-btn-text-color font-bold uppercase leading-[1] mb-4">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl text-btn-text-color font-semibold lg:font-bold uppercase leading-[1] mb-4">
                   My Projects
                 </h2>
                 <p className="font-switzer w-full mb-4 text-justify text-lg sm:text-xl lg:text-left">
@@ -81,7 +81,7 @@ const Projects = () => {
                 </p>
                 {isHidden == false ? (
                   <Link
-                    className="bg-btn-color cursor-pointer text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-bold rounded-sm p-2 
+                    className="bg-btn-color cursor-pointer text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
                                 duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px]"
                     onClick={() => setIsHidden(true)}
                     smooth={true}
@@ -93,7 +93,7 @@ const Projects = () => {
                   </Link>
                 ) : (
                   <button
-                    className="bg-[#e16162] cursor-not-allowed text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-bold rounded-sm p-2 
+                    className="bg-[#e16162] cursor-not-allowed text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
                                 duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px]"
                   >
                     View all projects
@@ -230,7 +230,7 @@ const Projects = () => {
                     setIsHidden(false);
                   }, 500)
                 }
-                className=" col-span-2 cursor-pointer bg-btn-color text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-bold rounded-sm p-2 
+                className=" col-span-2 cursor-pointer bg-btn-color text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
                                 duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px] w-fit"
               >
                 View Less

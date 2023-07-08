@@ -119,7 +119,7 @@ const Contact = () => {
             <input
               type="submit"
               value="Send message"
-              className="bg-btn-color cursor-pointer text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-bold rounded-sm p-2 
+              className="bg-btn-color cursor-pointer text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
                                mt-8 duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px]"
             />
           </motion.form>

@@ -22,7 +22,7 @@ const Header = () => {
           </a>
           <button
             onClick={() => alert("Not yet implemented!")}
-            className="bg-btn-color text-btn-text-color text-sm sm:text-lg md:text-xl font-khand font-bold rounded-sm p-2 pr-4 lg:pr-5 
+            className="bg-btn-color text-btn-text-color text-sm sm:text-lg md:text-xl font-khand font-semibold lg:font-bold rounded-sm p-2 pr-4 lg:pr-5 
                           flex justify-center items-center duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px]"
           >
             <img

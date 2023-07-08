@@ -102,7 +102,7 @@ const About = () => {
             </p>
             <div className="flex justify-center lg:justify-start items-center gap-2 pb-4">
               <Link
-                className="bg-btn-color cursor-pointer text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-bold rounded-sm p-2 
+                className="bg-btn-color cursor-pointer text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
                                 duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px]"
                 smooth={true}
                 duration={300}
@@ -113,7 +113,7 @@ const About = () => {
               <a
                 href={Resume}
                 target="_blank"
-                className="text-btn-text-color hover:bg-btn-text-color underline underline-offset-[12px] hover:no-underline text-md sm:text-xl md:text-2xl font-khand font-bold rounded-sm p-2 
+                className="text-btn-text-color hover:bg-btn-text-color underline underline-offset-[12px] hover:no-underline text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
                                 duration-200 ease-in hover:text-paragraph hover:shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px]"
               >
                 My Resume
