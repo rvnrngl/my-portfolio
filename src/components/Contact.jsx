@@ -1,8 +1,35 @@
-import React from "react";
+import React, { useRef } from "react";
 import { easeInOut, motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_19tap3a",
+        "template_ldq7oio",
+        form.current,
+        "nGSj8IUlPjIin2IFF"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message Sent!");
+          console.log("message sent");
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+          alert(error.text);
+        }
+      );
+  };
+
   return (
     <section
       id="contact"
@@ -34,6 +61,8 @@ const Contact = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
+            ref={form}
+            onSubmit={sendEmail}
             className="flex-1 font-switzer border flex flex-col lg:max-w-[500px]
                         justify-center items-center border-paragraph/50 rounded-lg p-4 pb-8 
                         text-sm lg:text-lg"
@@ -41,11 +70,13 @@ const Contact = () => {
             <input
               className="w-full bg-transparent outline-none border-b p-2 border-paragraph/50 hover:border-headline focus:border-headline transition-all duration-300 mb-4"
               type="text"
+              name="user_name"
               placeholder="Your name"
             />
             <input
               className="w-full bg-transparent outline-none border-b p-2 border-paragraph/50 hover:border-headline focus:border-headline transition-all duration-300 mb-4"
               type="email"
+              name="user_email"
               placeholder="Your email"
             />
             <textarea
@@ -55,13 +86,12 @@ const Contact = () => {
               rows={7}
               placeholder="Your message..."
             ></textarea>
-            <button
-              onClick={() => alert("Not yet implemented!")}
-              className="bg-btn-color text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-bold rounded-sm p-2 
+            <input
+              type="submit"
+              value="Send message"
+              className="bg-btn-color cursor-pointer text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-bold rounded-sm p-2 
                                mt-8 duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px]"
-            >
-              Send message
-            </button>
+            />
           </motion.form>
         </div>
       </div>
