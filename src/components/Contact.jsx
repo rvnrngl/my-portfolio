@@ -2,8 +2,12 @@ import React, { useRef } from "react";
 import { easeInOut, motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast, Slide } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  const SUCCESS = "success";
+  const FAIL = "fail";
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -19,17 +23,43 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          alert("Message Sent!");
-          console.log("message sent");
+          notify("success");
           e.target.reset();
         },
         (error) => {
           console.log(error.text);
-          alert(error.text);
+          notify("fail");
         }
       );
   };
 
+  const notify = (res) => {
+    if (res === SUCCESS) {
+      toast.success("Message sent!", {
+        position: "top-center",
+        autoClose: 3000,
+        transition: Slide,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: "dark",
+      });
+    } else if (res === FAIL) {
+      toast.error("Message not sent!", {
+        position: "top-center",
+        autoClose: 3000,
+        transition: Slide,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: "dark",
+      });
+    }
+  };
   return (
     <section
       id="contact"
@@ -95,6 +125,7 @@ const Contact = () => {
           </motion.form>
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 };
