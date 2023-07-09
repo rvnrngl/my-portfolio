@@ -5,7 +5,8 @@ const Cards = ({ name, description, src, srcPages, icons }) => {
     <>
       <div
         className="group relative max-w-[400px] lg:max-w-[500px] h-[267.5px] overflow-hidden border-2 border-bg-color text-headline rounded-md 
-                        shadow-[20px_20px_0px_rgba(0,0,0,0.8)] hover:shadow-[30px_30px_0px_rgba(0,0,0,0.8)] transition-all duration-200"
+        shadow-[10px_10px_0px_rgba(0,0,0,0.8)] hover:shadow-[20px_20px_0px_rgba(0,0,0,0.8)] transition-all duration-200 
+        lg:shadow-[20px_20px_0px_rgba(0,0,0,0.8)] lg:hover:shadow-[30px_30px_0px_rgba(0,0,0,0.8)]"
       >
         {/* hover */}
         <div className=" group-hover:bg-btn-text-color/80 w-full h-full absolute z-30 transition-all duration-300"></div>
