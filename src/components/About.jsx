@@ -36,7 +36,7 @@ const icons = [
 const About = () => {
   return (
     <section id="about" className="w-screen bg-paragraph">
-      <div className="w-full max-w-[1240px] lg:h-screen py-8 mx-auto px-6 font-khand text-bg-color flex justify-center items-center">
+      <div className="w-full max-w-[1240px] h-screen py-8 mx-auto px-6 font-khand text-bg-color flex justify-center items-center">
         <div className="container mx-auto grid lg:grid-cols-2 lg:place-items-center lg:gap-4">
           {/* image */}
           <div className="mb-4 overflow-hidden">
