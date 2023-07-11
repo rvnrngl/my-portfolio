@@ -27,9 +27,69 @@ const Home = () => {
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.5 }}
-                  className="text-headline text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold"
+                  className="text-headline text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold
+                  flex gap-1 cursor-default"
                 >
-                  HI, I'M RAVEN RINGEL
+                  <div className="inline-flex">
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      H
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      I
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      ,
+                    </h1>
+                  </div>
+                  <div className="inline-flex">
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      I
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      '
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      M
+                    </h1>
+                  </div>
+                  <div className="inline-flex">
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      R
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      A
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      V
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      E
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      N
+                    </h1>
+                  </div>
+                  <div className="inline-flex">
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      R
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      I
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      N
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      G
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      E
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      L
+                    </h1>
+                  </div>
+                  {/* I, I'M RAVEN RINGEL */}
                 </motion.h1>
               </div>
               <motion.div
@@ -39,7 +99,7 @@ const Home = () => {
                 viewport={{ once: false, amount: 0.5 }}
                 className="inline-flex items-center gap-1 md:gap-2 lg:gap-3"
               >
-                <span className="text-paragraph text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-[1]">
+                <span className="text-paragraph text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-[1] cursor-default">
                   I am a{" "}
                 </span>
                 <TypeAnimation
@@ -56,7 +116,7 @@ const Home = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.5 }}
-                className="font-switzer text-paragraph w-full max-w-[500px] py-4 text-center text-lg sm:text-xl lg:text-left"
+                className="font-switzer cursor-default text-paragraph w-full max-w-[500px] py-4 text-center text-lg sm:text-xl lg:text-left"
               >
                 I am a dedicated developer with a passion for crafting efficient
                 and elegant solutions that elevate user experiences.
