@@ -62,8 +62,32 @@ const About = () => {
             viewport={{ once: false, amount: 0.3 }}
             className="text-center lg:text-left"
           >
-            <h2 className="text-btn-text-color text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-[1] mb-4">
-              About Me
+            <h2 className="text-btn-text-color text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-[1] mb-4 flex gap-1 lg:gap-2 cursor-default">
+              <div className="inline-flex">
+                <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                  A
+                </h1>
+                <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                  B
+                </h1>
+                <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                  O
+                </h1>
+                <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                  U
+                </h1>
+                <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                  T
+                </h1>
+              </div>
+              <div className="inline-flex">
+                <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                  M
+                </h1>
+                <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                  E
+                </h1>
+              </div>
             </h2>
             <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mx-auto max-w-[400px] lg:max-w-[600px] font-semibold mb-4">
               I'm a Computer Science fresh graduate with background in Front End
