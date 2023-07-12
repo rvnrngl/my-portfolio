@@ -115,8 +115,35 @@ const Skills = () => {
               viewport={{ once: false, amount: 0.3 }}
               className="w-full max-w-[400px] mx-auto lg:max-w-[600px] text-center lg:text-left"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase leading-[1] mb-4">
-                My Skills
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase leading-[1] mb-4 flex justify-center lg:justify-start items-center gap-1 lg:gap-2 cursor-default">
+                <span className="inline-flex">
+                  <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                    M
+                  </h1>
+                  <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                    Y
+                  </h1>
+                </span>
+                <span className="inline-flex">
+                  <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                    S
+                  </h1>
+                  <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                    K
+                  </h1>
+                  <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                    I
+                  </h1>
+                  <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                    L
+                  </h1>
+                  <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                    L
+                  </h1>
+                  <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                    S
+                  </h1>
+                </span>
               </h2>
               <h3 className="font-switzer text-paragraph w-full max-w-[500px] mb-4 text-justify text-lg sm:text-xl lg:text-left">
                 I have acquired skills in Front End development, allowing me to
