@@ -71,8 +71,41 @@ const Projects = () => {
             >
               {/* headlines */}
               <div className="max-w-[400px] lg:max-w-[500px] h-[267.5px] flex flex-col justify-center items-start">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl text-btn-text-color font-semibold lg:font-bold uppercase leading-[1] mb-4">
-                  My Projects
+                <h2 className="text-3xl sm:text-4xl md:text-5xl text-btn-text-color font-semibold lg:font-bold uppercase leading-[1] mb-4 flex justify-center lg:justify-start items-center gap-1 lg:gap-2 cursor-default">
+                  <span className="inline-flex">
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      M
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      y
+                    </h1>
+                  </span>
+                  <span className="inline-flex">
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      P
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      r
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      o
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      j
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      e
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      c
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      t
+                    </h1>
+                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                      s
+                    </h1>
+                  </span>
                 </h2>
                 <p className="font-switzer w-full mb-4 text-justify text-lg sm:text-xl lg:text-left">
                   I have accumulated notable projects that showcase my skill in
