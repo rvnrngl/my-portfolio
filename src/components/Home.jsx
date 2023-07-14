@@ -18,6 +18,7 @@ const Home = () => {
         id="home"
         className="h-[calc(100vh_-_140px)] w-full max-w-[1240px] py-8 mx-auto px-6 font-khand"
       >
+        <div className="bg-grain lg:opacity-90 opacity-50"></div>
         <div className="container mx-auto pt-[clamp(20px,10vh,150px)]">
           <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center">
             <div className="w-full flex flex-col justify-center items-center lg:items-start">
@@ -122,7 +123,7 @@ const Home = () => {
                 and elegant solutions that elevate user experiences.
               </motion.p>
               {/* button group */}
-              <motion.div
+              {/* <motion.div
                 variants={fadeIn("up", 0.3)}
                 initial="hidden"
                 whileInView={"show"}
@@ -146,11 +147,11 @@ const Home = () => {
                 >
                   My Resume
                 </a>
-              </motion.div>
+              </motion.div> */}
               {/* icons */}
-              <div className="text-paragraph flex items-center gap-2">
+              <div className="text-paragraph flex items-center gap-2 z-[2]">
                 <motion.a
-                  variants={fadeIn("up", 0.4)}
+                  variants={fadeIn("up", 0.3)}
                   initial="hidden"
                   whileInView={"show"}
                   whileHover={{
@@ -232,12 +233,12 @@ const Home = () => {
               }}
               viewport={{ once: false, amount: 0.5 }}
               className="hidden lg:block w-[400px] h-[300px] opacity-80 bg-paragraph border-2 border-btn-text-color rounded-md 
-                            overflow-hidden relative mr-20"
+                            overflow-hidden relative mr-20 z-[2]"
             >
               <img
                 src={Image}
                 alt="author"
-                className="absolute left-0 top-[-55px] mix-blend-darken"
+                className="absolute left-0 top-[-50px] mix-blend-darken"
               />
             </motion.div>
           </div>

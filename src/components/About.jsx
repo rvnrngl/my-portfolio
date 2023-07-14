@@ -35,7 +35,8 @@ const icons = [
 
 const About = () => {
   return (
-    <section id="about" className="w-screen bg-paragraph">
+    <section id="about" className="w-screen h-screen bg-paragraph relative">
+      <div className="bg-grain opacity-50"></div>
       <div className="w-full max-w-[1240px] h-screen py-8 mx-auto px-6 font-khand text-bg-color flex justify-center items-center">
         <div className="container mx-auto grid lg:grid-cols-2 lg:place-items-center lg:gap-4">
           {/* image */}
@@ -107,7 +108,7 @@ const About = () => {
                     }}
                     viewport={{ once: false, amount: 0.3 }}
                     key={index}
-                    className="list-none group bg-btn-text-color w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] p-2 flex justify-center items-center rounded-md"
+                    className="list-none group bg-btn-text-color w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] p-2 flex justify-center items-center rounded-md hover:z-10"
                   >
                     <img
                       className=" mix-blend-luminosity group-hover:mix-blend-normal"
@@ -127,7 +128,7 @@ const About = () => {
             <div className="flex justify-center lg:justify-start items-center gap-2 pb-4">
               <Link
                 className="bg-btn-color cursor-pointer text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
-                                duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px]"
+                                duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px] z-[2]"
                 smooth={true}
                 duration={300}
                 to="contact"
@@ -138,7 +139,7 @@ const About = () => {
                 href={Resume}
                 target="_blank"
                 className="text-btn-text-color hover:bg-btn-text-color underline underline-offset-[12px] hover:no-underline text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
-                                duration-200 ease-in hover:text-paragraph hover:shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px]"
+                                duration-200 ease-in hover:text-paragraph hover:shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px] z-[2]"
               >
                 My Resume
               </a>

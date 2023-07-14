@@ -6,7 +6,7 @@ const Header = () => {
     <header className="w-full max-w-[1240px] h-[140px] mx-auto px-6">
       <div className="container mx-auto py-12">
         <div className="flex justify-between items-center">
-          <a href="/" className="group">
+          <a href="/" className="group z-[2]">
             <h1
               className="font-khand uppercase font-bold text-[#e16162] text-3xl md:text-4xl flex items-center 
                         duration-200 ease-in group-hover:text-paragraph group-hover:drop-shadow-[4px_4px_0px_#000000] hover:translate-x-[-2px]"
@@ -23,7 +23,7 @@ const Header = () => {
           <button
             onClick={() => alert("Not yet implemented!")}
             className="bg-btn-color text-btn-text-color text-sm sm:text-lg md:text-xl font-khand font-semibold lg:font-bold rounded-sm p-2 pr-4 lg:pr-5 
-                          flex justify-center items-center duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px]"
+                          flex justify-center items-center duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px] z-[2]"
           >
             <img
               className="w-[30px] lg:w-[40px]"

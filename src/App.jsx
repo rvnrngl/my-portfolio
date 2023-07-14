@@ -10,7 +10,7 @@ import Contact from "./components/Contact";
 function App() {
   return (
     <>
-      <div className=" bg-bg-color text-headline">
+      <div className="text-headline">
         <NavBar />
         <Header />
         <Home />
