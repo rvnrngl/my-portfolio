@@ -66,7 +66,7 @@ const Contact = () => {
         <div className="bg-grain lg:opacity-90 opacity-50"></div>
         <section
           id="contact"
-          className="w-full max-w-[1240px] h-screen py-8 mx-auto px-6 font-khand flex justify-center items-center"
+          className="w-full max-w-[1240px] min-h-screen py-8 mx-auto px-6 font-khand flex justify-center items-center"
         >
           <div className="container mx-auto">
             <div className="flex flex-col lg:flex-row justify-center items-center">

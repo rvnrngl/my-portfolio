@@ -9,14 +9,13 @@ import Resume from "../assets/resumeAuthor.pdf";
 import { TypeAnimation } from "react-type-animation";
 import { easeInOut, motion } from "framer-motion";
 import { fadeIn } from "../variants";
-import { Link } from "react-scroll";
 
 const Home = () => {
   return (
     <>
       <section
         id="home"
-        className="h-[calc(100vh_-_140px)] w-full max-w-[1240px] py-8 mx-auto px-6 font-khand"
+        className="min-h-[calc(100vh_-_140px)] lg:h-[calc(100vh_-_140px)] w-full max-w-[1240px] py-8 mx-auto px-6 font-khand"
       >
         <div className="bg-grain lg:opacity-90 opacity-50"></div>
         <div className="container mx-auto pt-[clamp(20px,10vh,150px)]">

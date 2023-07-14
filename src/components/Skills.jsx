@@ -190,7 +190,7 @@ const Skills = () => {
                 </Link>
               </motion.div>
               {/* skills */}
-              <div className="h-full lg:h-[60%] w-full max-w-[400px] lg:max-w-[600px] lg:overflow-y-scroll lg:cursor-pointer [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
+              <div className="h-full lg:h-[50%] w-full max-w-[400px] lg:max-w-[600px] lg:overflow-y-scroll lg:cursor-pointer [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
                 {skillsSet.map((items, index) => {
                   return (
                     <motion.div
