@@ -62,7 +62,7 @@ const Projects = () => {
       id="projects"
       className="w-screen bg-paragraph text-bg-color relative"
     >
-      <div className="bg-grain opacity-50"></div>
+      <div className="bg-grain lg:opacity-50 opacity-30"></div>
       <div className="w-full max-w-[1240px] lg:min-h-screen py-8 mx-auto px-6 font-khand flex justify-between items-center">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 place-items-center mb-10">
