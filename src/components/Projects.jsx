@@ -122,7 +122,7 @@ const Projects = () => {
                                 duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px] z-[2]"
                     onClick={() => setIsHidden(true)}
                     smooth={true}
-                    duration={300}
+                    duration={100}
                     to="otherProjects"
                     offset={-70}
                   >
