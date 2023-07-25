@@ -6,7 +6,7 @@ const Header = () => {
     <header className="w-full max-w-[1240px] h-[140px] mx-auto px-6">
       <div className="container mx-auto py-12">
         <div className="flex justify-between items-center">
-          <a href="/" className="group z-[2]">
+          <a href="#home" className="group z-[2]">
             <h1
               className="font-khand uppercase font-bold text-[#e16162] text-3xl md:text-4xl flex items-center 
                         duration-200 ease-in group-hover:text-paragraph group-hover:drop-shadow-[4px_4px_0px_#000000] hover:translate-x-[-2px]"
