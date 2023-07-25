@@ -5,7 +5,7 @@ import {
 } from "react-icons/ai";
 import { FaGithubSquare } from "react-icons/fa";
 import Image from "../assets/author.png";
-import Resume from "../assets/resumeAuthor.pdf";
+import Developer from "../assets/developer.jpg";
 import { TypeAnimation } from "react-type-animation";
 import { easeInOut, motion } from "framer-motion";
 import { fadeIn } from "../variants";
@@ -121,32 +121,6 @@ const Home = () => {
                 I am a dedicated developer with a passion for crafting efficient
                 and elegant solutions that elevate user experiences.
               </motion.p>
-              {/* button group */}
-              {/* <motion.div
-                variants={fadeIn("up", 0.3)}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{ once: false, amount: 0.5 }}
-                className="flex items-center gap-2 pb-4"
-              >
-                <Link
-                  className="bg-btn-color cursor-pointer text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
-                                duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px]"
-                  smooth={true}
-                  duration={300}
-                  to="contact"
-                >
-                  Contact Me
-                </Link>
-                <a
-                  href={Resume}
-                  target="_blank"
-                  className="text-paragraph hover:bg-paragraph underline underline-offset-[12px] hover:no-underline text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
-                                duration-200 ease-in hover:text-btn-text-color hover:shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px]"
-                >
-                  My Resume
-                </a>
-              </motion.div> */}
               {/* icons */}
               <div className="text-paragraph flex items-center gap-2 z-[2]">
                 <motion.a
@@ -235,9 +209,9 @@ const Home = () => {
                             overflow-hidden relative mr-20 z-[2]"
             >
               <img
-                src={Image}
+                src={Developer}
                 alt="author"
-                className="absolute left-0 top-[-50px] mix-blend-darken"
+                className="absolute left-[5px] top-[15px] scale-[1.3]"
               />
             </motion.div>
           </div>
