@@ -181,7 +181,7 @@ const Skills = () => {
                 {/* button */}
                 <Link
                   className="bg-btn-color text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
-                                duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] cursor-pointer hover:translate-x-[-2px]"
+                                duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:-translate-x-[2px] cursor-pointer"
                   smooth={true}
                   duration={300}
                   to="projects"
