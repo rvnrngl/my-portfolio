@@ -17,7 +17,7 @@ const Home = () => {
         id="home"
         className="min-h-[calc(100vh_-_140px)] lg:h-[calc(100vh_-_140px)] w-full max-w-[1240px] py-8 mx-auto px-6 font-khand"
       >
-        <div className="bg-grain lg:opacity-90 opacity-50"></div>
+        <div className="lg:opacity-90 opacity-50"></div>
         <div className="container mx-auto pt-[clamp(20px,10vh,150px)]">
           <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center">
             <div className="w-full flex flex-col justify-center items-center lg:items-start">

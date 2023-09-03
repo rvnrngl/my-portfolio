@@ -1,5 +1,6 @@
 import React from "react";
-import coffee from "../assets/buy-me-a-coffee.svg";
+import Resume from "../assets/resumeAuthor.pdf";
+import { BsFillPersonFill } from "react-icons/bs";
 
 const Header = () => {
   return (
@@ -20,18 +21,15 @@ const Header = () => {
               </span>
             </h1>
           </a>
-          <button
-            onClick={() => alert("Not yet implemented!")}
-            className="bg-btn-color text-btn-text-color text-sm sm:text-lg md:text-xl font-khand font-semibold lg:font-bold rounded-sm p-2 pr-4 lg:pr-5 
+          <a
+            href={Resume}
+            target="_blank"
+            className="bg-btn-color text-btn-text-color text-sm sm:text-lg md:text-xl font-khand font-semibold lg:font-bold rounded-sm p-1 px-2 lg:p-2 lg:px-4 
                           flex justify-center items-center duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px] z-[2]"
           >
-            <img
-              className="w-[30px] lg:w-[40px]"
-              src={coffee}
-              alt="Buy Me a Coffee"
-            />
-            Buy me a coffee
-          </button>
+            Resume
+            <BsFillPersonFill />
+          </a>
         </div>
       </div>
     </header>

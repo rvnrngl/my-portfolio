@@ -102,7 +102,7 @@ const Skills = () => {
   return (
     <>
       <div className="w-screen relative">
-        <div className="bg-grain lg:opacity-90 opacity-50"></div>
+        <div className="lg:opacity-90 opacity-50"></div>
         <section
           id="skills"
           className="w-full max-w-[1240px] lg:h-screen py-8 mx-auto px-6 font-khand flex justify-center items-center"

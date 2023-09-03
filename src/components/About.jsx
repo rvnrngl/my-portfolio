@@ -36,7 +36,7 @@ const icons = [
 const About = () => {
   return (
     <section id="about" className="w-screen min-h-screen bg-paragraph relative">
-      <div className="bg-grain lg:opacity-50 opacity-30"></div>
+      <div className="lg:opacity-50 opacity-30"></div>
       <div className="w-full max-w-[1240px] min-h-screen py-8 mx-auto px-6 font-khand text-bg-color flex justify-center items-center">
         <div className="container mx-auto grid lg:grid-cols-2 lg:place-items-center lg:gap-4">
           {/* image */}
@@ -91,7 +91,7 @@ const About = () => {
               </span>
             </h2>
             <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mx-auto max-w-[400px] lg:max-w-[600px] font-semibold mb-4">
-              I'm a Computer Science fresh graduate with background in Front End
+              I'm a Computer Science fresh graduate with background in Web
               Development.
             </h3>
             <div className="mb-4 mx-auto lg:mx-0 gap-1 sm:gap-3 flex justify-center lg:justify-start items-center max-w-[400px] lg:max-w-[600px]">

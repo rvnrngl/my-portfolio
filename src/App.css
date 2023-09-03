@@ -6,7 +6,7 @@ html,body {
     background-color: #004643;
 }
 
-.bg-grain {
+/* .bg-grain {
     position: absolute;
     background-image: url("./assets/noiseFilter.svg");
     mix-blend-mode: multiply;
@@ -16,7 +16,7 @@ html,body {
     top: 0;
     left: 0;
     z-index: 1;
-}
+} */
 
 body {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */

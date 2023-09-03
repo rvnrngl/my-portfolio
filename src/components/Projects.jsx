@@ -62,7 +62,7 @@ const Projects = () => {
       id="projects"
       className="w-screen bg-paragraph text-bg-color relative"
     >
-      <div className="bg-grain lg:opacity-50 opacity-30"></div>
+      <div className="lg:opacity-50 opacity-30"></div>
       <div className="w-full max-w-[1240px] lg:min-h-screen py-8 mx-auto px-6 font-khand flex justify-between items-center">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 place-items-center mb-10">
@@ -131,7 +131,7 @@ const Projects = () => {
                 ) : (
                   <button
                     className="bg-[#e16162] cursor-not-allowed text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
-                                duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px] z-[2]"
+                                duration-200 ease-in"
                   >
                     View all projects
                   </button>
