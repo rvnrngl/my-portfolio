@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import { easeInOut, motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import { Link } from "react-scroll";
+import animeeshMockup from "../assets/mockups/animeesh-mockups.png";
+import colorFillMockup from "../assets/mockups/colorfill-mockups.png";
+import fashionStepMockup from "../assets/mockups/fashionstep-mockups.png";
+import todoListMockup from "../assets/mockups/todolist-mockups.png";
+import beshifyMockup from "../assets/mockups/beshify-mockups.png";
+import calculatorMockup from "../assets/mockups/calculator-mockups.png";
 import fashionStep from "../assets/projects/fashion-step.gif";
 import colorFill from "../assets/projects/colorFill.gif";
 import markdown from "../assets/projects/markdown.gif";
@@ -16,6 +22,8 @@ import jsIcon from "../assets/icons/js.png";
 import javaIcon from "../assets/icons/java.png";
 import pythonIcon from "../assets/icons/python.png";
 import cssIcon from "../assets/icons/css-3.png";
+import restIcon from "../assets/icons/rest-api-icon.png";
+import firebaseIcon from "../assets/icons/firebase.png";
 import Cards from "./Cards";
 
 const icons = [
@@ -46,6 +54,14 @@ const icons = [
   {
     name: "Python",
     src: pythonIcon,
+  },
+  {
+    name: "REST",
+    src: restIcon,
+  },
+  {
+    name: "Firebase",
+    src: firebaseIcon,
   },
 ];
 
@@ -116,38 +132,49 @@ const Projects = () => {
                   creating responsive websites with user-friendly interfaces and
                   captivating user experiences.
                 </p>
-                {isHidden == false ? (
-                  <Link
-                    className="bg-btn-color cursor-pointer text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
+                <div className="flex justify-center lg:justify-start items-center gap-2 pb-4">
+                  {isHidden == false ? (
+                    <Link
+                      className="bg-btn-color cursor-pointer text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
                                 duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px] z-[2]"
-                    onClick={() => setIsHidden(true)}
-                    smooth={true}
-                    duration={100}
-                    to="otherProjects"
-                    offset={-70}
-                  >
-                    View all projects
-                  </Link>
-                ) : (
-                  <button
-                    className="bg-[#e16162] cursor-not-allowed text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
+                      onClick={() => setIsHidden(true)}
+                      smooth={true}
+                      duration={100}
+                      to="otherProjects"
+                      offset={-70}
+                    >
+                      See more
+                    </Link>
+                  ) : (
+                    <button
+                      className="bg-[#e16162] cursor-not-allowed text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
                                 duration-200 ease-in"
+                    >
+                      See more
+                    </button>
+                  )}
+                  <a
+                    href="https://github.com/rvnrngl?tab=repositories"
+                    target="_blank"
+                    className="col-span-2 text-btn-text-color hover:bg-btn-text-color underline underline-offset-[12px] hover:no-underline text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
+                duration-200 ease-in hover:text-paragraph hover:shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px] z-[2]"
                   >
                     View all projects
-                  </button>
-                )}
+                  </a>
+                </div>
               </div>
               {/* projects card */}
               <Cards
-                name="Fashion Step"
-                description="A shoes shop webstite template."
-                src={fashionStep}
-                srcPages="https://rvnrngl.github.io/fashion-step-website/"
+                name="Animeesh"
+                description="A streaming anime website with up to date contents."
+                src={animeeshMockup}
+                srcPages="https://animeesh.vercel.app/"
                 icons={getIcons([
                   "HTML",
                   "JavaScript",
                   "React",
                   "Tailwind CSS",
+                  "REST",
                 ])}
               />
             </motion.div>
@@ -159,18 +186,23 @@ const Projects = () => {
               className="flex flex-col gap-y-10 max-w-[400px] lg:max-w-[500px]"
             >
               <Cards
-                name="ColorFill"
-                description="An android-based Color Blind Simulator App."
-                src={colorFill}
-                srcPages="https://github.com/rvnrngl/ColorFill-App"
-                icons={getIcons(["Java", "Python"])}
+                name="Fashion Step"
+                description="A shoes shop webstite template."
+                src={fashionStepMockup}
+                srcPages="https://rvnrngl.github.io/fashion-step-website/"
+                icons={getIcons([
+                  "HTML",
+                  "JavaScript",
+                  "React",
+                  "Tailwind CSS",
+                ])}
               />
               <Cards
-                name="Quote Machine Generator"
-                description="A website that generates random quotes."
-                src={quoteGenerator}
-                srcPages="https://rvnrngl.github.io/random-quote-machine/"
-                icons={getIcons(["HTML", "CSS", "JavaScript", "React"])}
+                name="ColorFill"
+                description="An android app that simulates colorblindness."
+                src={colorFillMockup}
+                srcPages="https://github.com/rvnrngl/ColorFill-App"
+                icons={getIcons(["Java", "Python"])}
               />
             </motion.div>
           </div>
@@ -191,30 +223,31 @@ const Projects = () => {
                 className="col-span-2 lg:col-span-1"
               >
                 <Cards
-                  name="Calculator"
-                  description="An Ios clone calculator app."
-                  src={calculator}
-                  srcPages="https://rvnrngl.github.io/simple-calculator/"
+                  name="Todo List App"
+                  description="Simple todo list app using firebase."
+                  src={todoListMockup}
+                  srcPages="https://rvnrngl.github.io/todo-list-app/"
                   icons={getIcons([
                     "HTML",
                     "JavaScript",
                     "React",
                     "Tailwind CSS",
+                    "Firebase",
                   ])}
                 />
               </motion.div>
               <motion.div
-                variants={fadeIn("left", 0.1)}
+                variants={fadeIn("right", 0.1)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: true, amount: 0.3 }}
                 className="col-span-2 lg:col-span-1"
               >
                 <Cards
-                  name="Mini Drum"
-                  description="A simple mini drum machine app."
-                  src={miniDrum}
-                  srcPages="https://rvnrngl.github.io/mini-drum-machine/"
+                  name="Beshify App"
+                  description="An app that adds emoji in your text."
+                  src={beshifyMockup}
+                  srcPages="https://rvnrngl.github.io/beshify-app/"
                   icons={getIcons([
                     "HTML",
                     "JavaScript",
@@ -228,34 +261,19 @@ const Projects = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: true, amount: 0.3 }}
-                className="col-span-2 lg:col-span-1"
+                className="col-span-2"
               >
                 <Cards
-                  name="Padoromo Clock"
-                  description="A simple session and break time clock."
-                  src={padoromo}
-                  srcPages="https://rvnrngl.github.io/padoromo-clock/"
+                  name="Calculator"
+                  description="An Ios clone calculator app."
+                  src={calculator}
+                  srcPages="https://rvnrngl.github.io/simple-calculator/"
                   icons={getIcons([
                     "HTML",
                     "JavaScript",
                     "React",
                     "Tailwind CSS",
                   ])}
-                />
-              </motion.div>
-              <motion.div
-                variants={fadeIn("left", 0.1)}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{ once: true, amount: 0.3 }}
-                className="col-span-2 lg:col-span-1"
-              >
-                <Cards
-                  name="MarkDown Previewer"
-                  description="A simple markdown previewer website."
-                  src={markdown}
-                  srcPages="https://rvnrngl.github.io/markdown-previewer/"
-                  icons={getIcons(["HTML", "CSS", "JavaScript", "React"])}
                 />
               </motion.div>
               <Link

@@ -5,13 +5,12 @@ const Cards = ({ name, description, src, srcPages, icons }) => {
     <>
       <div
         className="group relative max-w-[400px] lg:max-w-[500px] h-[267.5px] overflow-hidden border-2 border-bg-color text-headline rounded-md 
-        shadow-[10px_10px_0px_rgba(0,0,0,0.8)] hover:shadow-[20px_20px_0px_rgba(0,0,0,0.8)] transition-all duration-200 
-        lg:shadow-[20px_20px_0px_rgba(0,0,0,0.8)] lg:hover:shadow-[30px_30px_0px_rgba(0,0,0,0.8)] z-[2]"
+        shadow-[10px_10px_0px_rgba(0,0,0,0.8)] transition-all duration-200 lg:shadow-[20px_20px_0px_rgba(0,0,0,0.8)] z-[2]"
       >
         {/* hover */}
         <div className=" group-hover:bg-btn-text-color/80 w-full h-full absolute z-30 transition-all duration-300"></div>
         <img
-          className="group-hover:scale-125 transition-all duration-300 w-full h-full object-cover"
+          className="group-hover:scale-110 transition-all duration-300 w-full h-full object-cover"
           src={src}
           alt="fashion-step image"
         />
@@ -42,7 +41,7 @@ const Cards = ({ name, description, src, srcPages, icons }) => {
             className="text-paragraph cursor-pointer hover:bg-paragraph underline underline-offset-[12px] hover:no-underline text-sm lg:text-md font-khand font-semibold rounded-sm p-2 
                           duration-200 ease-in hover:text-btn-text-color hover:shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px]"
           >
-            View in GitHub
+            <span>Visit Website</span>
           </a>
         </div>
       </div>
