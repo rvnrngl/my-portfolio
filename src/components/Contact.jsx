@@ -79,10 +79,10 @@ const Contact = () => {
                 className="flex-1 lg:max-w-[500px]"
               >
                 <div className=" flex flex-col justify-center items-center lg:items-start">
-                  <h3 className=" text-[#e16162] text-md md:text-2xl uppercase font-semibold">
+                  <h3 className=" text-[#e16162] text-md md:text-2xl uppercase font-medium lg:font-semibold">
                     Get in touch
                   </h3>
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-center lg:text-left font-bold leading-[1] mb-4">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-center lg:text-left font-semibold lg:font-bold leading-[1] mb-4">
                     <span className=" text-paragraph block">Let's work </span>
                     together!
                   </h2>

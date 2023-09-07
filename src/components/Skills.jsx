@@ -117,7 +117,7 @@ const Skills = () => {
                 viewport={{ once: true, amount: 0.3 }}
                 className="w-full max-w-[400px] mx-auto lg:max-w-[600px] text-center lg:text-left"
               >
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase leading-[1] mb-4 flex justify-center lg:justify-start items-center gap-1 lg:gap-2 cursor-default">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold lg:font-bold uppercase leading-[1] mb-4 flex justify-center lg:justify-start items-center gap-1 lg:gap-2 cursor-default">
                   <span className="inline-flex">
                     <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
                       M

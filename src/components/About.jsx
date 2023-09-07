@@ -63,7 +63,7 @@ const About = () => {
             viewport={{ once: true, amount: 0.3 }}
             className="text-center lg:text-left"
           >
-            <h2 className="text-btn-text-color text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-[1] mb-4 flex justify-center lg:justify-start items-center gap-1 lg:gap-2 cursor-default">
+            <h2 className="text-btn-text-color text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold lg:font-bold uppercase leading-[1] mb-4 flex justify-center lg:justify-start items-center gap-1 lg:gap-2 cursor-default">
               <span className="inline-flex">
                 <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
                   A
@@ -90,7 +90,7 @@ const About = () => {
                 </h1>
               </span>
             </h2>
-            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mx-auto max-w-[400px] lg:max-w-[600px] font-semibold mb-4">
+            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mx-auto max-w-[400px] lg:max-w-[600px] font-medium lg:font-semibold mb-4">
               I'm a Computer Science fresh graduate with background in Web
               Development.
             </h3>

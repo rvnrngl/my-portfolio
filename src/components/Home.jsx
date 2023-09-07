@@ -26,7 +26,7 @@ const Home = () => {
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: true, amount: 0.5 }}
-                  className="text-headline text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold
+                  className="text-headline text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium lg:font-semibold
                   flex gap-1 cursor-default"
                 >
                   <div className="inline-flex">
@@ -98,7 +98,7 @@ const Home = () => {
                 viewport={{ once: true, amount: 0.5 }}
                 className="inline-flex items-center gap-1 md:gap-2 lg:gap-3"
               >
-                <span className="text-paragraph text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-[1] cursor-default">
+                <span className="text-paragraph text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold lg:font-bold uppercase leading-[1] cursor-default">
                   I am a{" "}
                 </span>
                 <TypeAnimation
@@ -109,7 +109,6 @@ const Home = () => {
                   className="text-[#e16162] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-[1]"
                 />
               </motion.div>
-
               <motion.p
                 variants={fadeIn("up", 0.2)}
                 initial="hidden"
