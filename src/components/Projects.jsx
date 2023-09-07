@@ -7,14 +7,7 @@ import colorFillMockup from "../assets/mockups/colorfill-mockups.png";
 import fashionStepMockup from "../assets/mockups/fashionstep-mockups.png";
 import todoListMockup from "../assets/mockups/todolist-mockups.png";
 import beshifyMockup from "../assets/mockups/beshify-mockups.png";
-import calculatorMockup from "../assets/mockups/calculator-mockups.png";
-import fashionStep from "../assets/projects/fashion-step.gif";
-import colorFill from "../assets/projects/colorFill.gif";
-import markdown from "../assets/projects/markdown.gif";
-import quoteGenerator from "../assets/projects/quote-generator.png";
 import calculator from "../assets/projects/calculator.png";
-import miniDrum from "../assets/projects/mini-drum.png";
-import padoromo from "../assets/projects/padoromo-clock.png";
 import reactIcon from "../assets/icons/react.png";
 import tailWindIcon from "../assets/icons/tailwind.png";
 import htmlIcon from "../assets/icons/html-5.png";
@@ -139,7 +132,7 @@ const Projects = () => {
                                 duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px] z-[2]"
                       onClick={() => setIsHidden(true)}
                       smooth={true}
-                      duration={100}
+                      duration={500}
                       to="otherProjects"
                       offset={-70}
                     >
@@ -279,11 +272,11 @@ const Projects = () => {
               <Link
                 to="projects"
                 smooth={true}
-                duration={300}
+                duration={500}
                 onClick={() =>
                   setTimeout(() => {
                     setIsHidden(false);
-                  }, 500)
+                  }, 300)
                 }
                 className=" col-span-2 cursor-pointer bg-btn-color text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
                                 duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px] z-[2]"
