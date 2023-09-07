@@ -4,7 +4,6 @@ import {
   AiFillTwitterSquare,
 } from "react-icons/ai";
 import { FaGithubSquare } from "react-icons/fa";
-import Image from "../assets/author.png";
 import Developer from "../assets/developer.jpg";
 import { TypeAnimation } from "react-type-animation";
 import { easeInOut, motion } from "framer-motion";
