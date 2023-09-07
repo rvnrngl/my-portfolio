@@ -9,7 +9,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
           <a href="#head" className="group z-[2]">
             <h1
-              className="font-khand uppercase font-bold text-[#e16162] text-3xl md:text-4xl flex items-center 
+              className="font-khand uppercase font-semibold lg:font-bold text-[#e16162] text-3xl md:text-4xl flex items-center 
                         duration-200 ease-in group-hover:text-paragraph group-hover:drop-shadow-[4px_4px_0px_#000000] hover:translate-x-[-2px]"
             >
               <span className="text-paragraph text-4xl md:text-5xl group-hover:text-[#e16162]">
