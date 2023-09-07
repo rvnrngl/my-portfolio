@@ -9,58 +9,58 @@ const NavBar = () => {
       <nav className="fixed bottom-5 lg:bottom-8 w-full overflow-hidden z-50 px-4">
         <div className="container mx-auto">
           <div
-            className="w-full h-16 sm:h-20 bg-paragraph/20 backdrop-blur-2xl rounded-full 
+            className="w-full h-14 lg:h-20 bg-paragraph/20 backdrop-blur-2xl rounded-full 
                         max-w-[460px] flex justify-between items-center mx-auto px-5 
                         text-btn-text-color text-2xl sm:text-3xl"
           >
             <Link
+              activeClass="active"
               to="home"
               spy={true}
-              activeClass="active"
               smooth={true}
-              duration={300}
+              duration={500}
               offset={-200}
-              className="cursor-pointer w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] lg:hover:bg-paragraph/20 duration-300 ease-in-out rounded-full flex justify-center items-center"
+              className="cursor-pointer w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] lg:hover:bg-paragraph/20 duration-300 ease-in-out rounded-full flex justify-center items-center"
             >
               <FaHome />
             </Link>
             <Link
+              activeClass="active"
               to="about"
               spy={true}
-              activeClass="active"
               smooth={true}
-              duration={300}
-              className="cursor-pointer w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] lg:hover:bg-paragraph/20 duration-300 ease-in-out rounded-full flex justify-center items-center"
+              duration={500}
+              className="cursor-pointer w-[40px] h-[40px] sm:w-[60px] lg:h-[60px] lg:hover:bg-paragraph/20 duration-300 ease-in-out rounded-full flex justify-center items-center"
             >
               <FaUser />
             </Link>
             <Link
+              activeClass="active"
               to="skills"
               spy={true}
-              activeClass="active"
               smooth={true}
-              duration={300}
-              className="cursor-pointer w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] lg:hover:bg-paragraph/20 duration-300 ease-in-out rounded-full flex justify-center items-center"
+              duration={500}
+              className="cursor-pointer w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] lg:hover:bg-paragraph/20 duration-300 ease-in-out rounded-full flex justify-center items-center"
             >
               <FaFire />
             </Link>
             <Link
+              activeClass="active"
               to="projects"
               spy={true}
-              activeClass="active"
               smooth={true}
-              duration={300}
-              className="cursor-pointer w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] lg:hover:bg-paragraph/20 duration-300 ease-in-out rounded-full flex justify-center items-center"
+              duration={500}
+              className="cursor-pointer w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] lg:hover:bg-paragraph/20 duration-300 ease-in-out rounded-full flex justify-center items-center"
             >
               <HiRectangleStack />
             </Link>
             <Link
+              activeClass="active"
               to="contact"
               spy={true}
-              activeClass="active"
               smooth={true}
-              duration={300}
-              className="cursor-pointer w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] lg:hover:bg-paragraph/20 duration-300 ease-in-out rounded-full flex justify-center items-center"
+              duration={500}
+              className="cursor-pointer w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] lg:hover:bg-paragraph/20 duration-300 ease-in-out rounded-full flex justify-center items-center"
             >
               <BiSolidMessageDots />
             </Link>

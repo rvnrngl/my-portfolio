@@ -114,7 +114,7 @@ const Skills = () => {
                 variants={fadeIn("right", 0.3)}
                 initial="hidden"
                 whileInView={"show"}
-                viewport={{ once: false, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.3 }}
                 className="w-full max-w-[400px] mx-auto lg:max-w-[600px] text-center lg:text-left"
               >
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase leading-[1] mb-4 flex justify-center lg:justify-start items-center gap-1 lg:gap-2 cursor-default">
@@ -165,7 +165,7 @@ const Skills = () => {
                           transition: { duration: 0.2, ease: easeInOut },
                           boxShadow: "5px 5px 0px #e16162",
                         }}
-                        viewport={{ once: false, amount: 0.3 }}
+                        viewport={{ once: true, amount: 0.3 }}
                         key={index}
                         className="list-none group bg-btn-text-color w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] p-2 flex justify-center items-center rounded-md hover:z-[2]"
                       >
@@ -197,7 +197,7 @@ const Skills = () => {
                       variants={fadeIn("left", items.duration)}
                       initial="hidden"
                       whileInView={"show"}
-                      viewport={{ once: false, amount: 0.3 }}
+                      viewport={{ once: true, amount: 0.3 }}
                       key={index}
                     >
                       <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#e16162]">

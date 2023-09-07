@@ -26,7 +26,7 @@ const Home = () => {
                   variants={fadeIn("up", 0)}
                   initial="hidden"
                   whileInView={"show"}
-                  viewport={{ once: false, amount: 0.5 }}
+                  viewport={{ once: true, amount: 0.5 }}
                   className="text-headline text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold
                   flex gap-1 cursor-default"
                 >
@@ -96,7 +96,7 @@ const Home = () => {
                 variants={fadeIn("up", 0.1)}
                 initial="hidden"
                 whileInView={"show"}
-                viewport={{ once: false, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.5 }}
                 className="inline-flex items-center gap-1 md:gap-2 lg:gap-3"
               >
                 <span className="text-paragraph text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-[1] cursor-default">
@@ -115,7 +115,7 @@ const Home = () => {
                 variants={fadeIn("up", 0.2)}
                 initial="hidden"
                 whileInView={"show"}
-                viewport={{ once: false, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.5 }}
                 className="font-switzer cursor-default text-paragraph w-full max-w-[500px] py-4 text-center text-lg sm:text-xl lg:text-left"
               >
                 I am a dedicated developer with a passion for crafting efficient
@@ -132,7 +132,7 @@ const Home = () => {
                     transition: { duration: 0.2, ease: easeInOut },
                     filter: "drop-shadow(5px 5px 0px #000000)",
                   }}
-                  viewport={{ once: false, amount: 0.5 }}
+                  viewport={{ once: true, amount: 0.5 }}
                   href="https://www.facebook.com/raven.ringel/"
                   target="_blank"
                   className="hover:text-[#e16162] drop-shadow-none"
@@ -148,7 +148,7 @@ const Home = () => {
                     transition: { duration: 0.2, ease: easeInOut },
                     filter: "drop-shadow(5px 5px 0px #000000)",
                   }}
-                  viewport={{ once: false, amount: 0.5 }}
+                  viewport={{ once: true, amount: 0.5 }}
                   href="https://www.linkedin.com/in/raven-ringel-34aa77273/"
                   target="_blank"
                   className="hover:text-[#e16162] drop-shadow-none"
@@ -164,7 +164,7 @@ const Home = () => {
                     transition: { duration: 0.2, ease: easeInOut },
                     filter: "drop-shadow(5px 5px 0px #000000)",
                   }}
-                  viewport={{ once: false, amount: 0.5 }}
+                  viewport={{ once: true, amount: 0.5 }}
                   href="https://twitter.com/Raven47261939"
                   target="_blank"
                   className="hover:text-[#e16162] drop-shadow-none"
@@ -180,7 +180,7 @@ const Home = () => {
                     transition: { duration: 0.2, ease: easeInOut },
                     filter: "drop-shadow(5px 5px 0px #000000)",
                   }}
-                  viewport={{ once: false, amount: 0.5 }}
+                  viewport={{ once: true, amount: 0.5 }}
                   href="https://github.com/rvnrngl"
                   target="_blank"
                   className="hover:text-[#e16162] drop-shadow-none"
@@ -204,7 +204,7 @@ const Home = () => {
                 translateY: "-20px",
                 boxShadow: "20px 20px 0px rgba(0,0,0,0.5)",
               }}
-              viewport={{ once: false, amount: 0.5 }}
+              viewport={{ once: true, amount: 0.5 }}
               className="hidden lg:block w-[400px] h-[300px] opacity-80 bg-paragraph border-2 border-btn-text-color rounded-md 
                             overflow-hidden relative mr-20 z-[2]"
             >
