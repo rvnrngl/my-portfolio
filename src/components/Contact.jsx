@@ -4,8 +4,10 @@ import { fadeIn } from "../variants";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { UseIsMobile } from "./UseIsMobile";
 
 const Contact = () => {
+  const { isMobile } = UseIsMobile();
   const SUCCESS = "success";
   const FAIL = "fail";
   const form = useRef();
@@ -69,10 +71,10 @@ const Contact = () => {
           className="w-full max-w-[1240px] min-h-screen py-8 mx-auto px-6 font-khand flex justify-center items-center"
         >
           <div className="container mx-auto">
-            <div className="flex flex-col lg:flex-row justify-center items-center">
+            <div className="flex flex-col gap-10 lg:flex-row justify-center items-center">
               {/* headline */}
               <motion.div
-                variants={fadeIn("right", 0.3)}
+                variants={isMobile ? fadeIn("up", 0.2) : fadeIn("right", 0.3)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: true, amount: 0.3 }}
@@ -90,7 +92,7 @@ const Contact = () => {
               </motion.div>
               {/* form */}
               <motion.form
-                variants={fadeIn("left", 0.3)}
+                variants={isMobile ? fadeIn("up", 0.4) : fadeIn("left", 0.3)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: true, amount: 0.3 }}

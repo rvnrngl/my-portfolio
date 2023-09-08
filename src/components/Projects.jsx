@@ -18,6 +18,7 @@ import cssIcon from "../assets/icons/css-3.png";
 import restIcon from "../assets/icons/rest-api-icon.png";
 import firebaseIcon from "../assets/icons/firebase.png";
 import Cards from "./Cards";
+import { UseIsMobile } from "./UseIsMobile";
 
 const icons = [
   {
@@ -60,6 +61,7 @@ const icons = [
 
 const Projects = () => {
   const [isHidden, setIsHidden] = useState(false);
+  const { isMobile } = UseIsMobile();
 
   const getIcons = (names) => {
     const items = icons.filter((item) => names.includes(item.name));
@@ -76,7 +78,7 @@ const Projects = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 place-items-center mb-10">
             <motion.div
-              variants={fadeIn("right", 0.1)}
+              variants={isMobile ? fadeIn("up", 0.3) : fadeIn("right", 0.1)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: true, amount: 0.3 }}
@@ -172,7 +174,7 @@ const Projects = () => {
               />
             </motion.div>
             <motion.div
-              variants={fadeIn("left", 0.1)}
+              variants={isMobile ? fadeIn("up", 0.3) : fadeIn("left", 0.1)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: true, amount: 0.3 }}
@@ -209,7 +211,7 @@ const Projects = () => {
               }
             >
               <motion.div
-                variants={fadeIn("right", 0.1)}
+                variants={isMobile ? fadeIn("up", 0.3) : fadeIn("left", 0.1)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: true, amount: 0.3 }}
@@ -230,7 +232,7 @@ const Projects = () => {
                 />
               </motion.div>
               <motion.div
-                variants={fadeIn("right", 0.1)}
+                variants={isMobile ? fadeIn("up", 0.3) : fadeIn("left", 0.1)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: true, amount: 0.3 }}
@@ -250,7 +252,7 @@ const Projects = () => {
                 />
               </motion.div>
               <motion.div
-                variants={fadeIn("right", 0.1)}
+                variants={isMobile ? fadeIn("up", 0.3) : fadeIn("left", 0.1)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: true, amount: 0.3 }}

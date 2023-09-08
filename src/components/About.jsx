@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { easeInOut, motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import { Link } from "react-scroll";
@@ -9,31 +9,33 @@ import cssIcon from "../assets/icons/css-3.png";
 import jsIcon from "../assets/icons/js.png";
 import reactIcon from "../assets/icons/react.png";
 import tailWindIcon from "../assets/icons/tailwind.png";
+import { UseIsMobile } from "./UseIsMobile";
 
 const icons = [
   {
     src: htmlIcon,
-    duration: 0.4,
+    duration: 0.3,
   },
   {
     src: cssIcon,
-    duration: 0.5,
+    duration: 0.4,
   },
   {
     src: jsIcon,
-    duration: 0.6,
+    duration: 0.5,
   },
   {
     src: reactIcon,
-    duration: 0.7,
+    duration: 0.6,
   },
   {
     src: tailWindIcon,
-    duration: 0.8,
+    duration: 0.7,
   },
 ];
 
 const About = () => {
+  const { isMobile } = UseIsMobile();
   return (
     <section id="about" className="w-screen min-h-screen bg-paragraph relative">
       <div className="lg:opacity-50 opacity-30"></div>
@@ -42,7 +44,9 @@ const About = () => {
           {/* image */}
           <div className="mb-4 overflow-hidden">
             <motion.img
-              variants={fadeIn("right", 0.3)}
+              variants={
+                isMobile === true ? fadeIn("up", 0.2) : fadeIn("right", 0.3)
+              }
               initial="hidden"
               whileInView={"show"}
               whileHover={{
@@ -57,7 +61,7 @@ const About = () => {
           </div>
           {/* text */}
           <motion.div
-            variants={fadeIn("left", 0.3)}
+            variants={isMobile ? fadeIn("up", 0.3) : fadeIn("left", 0.3)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.3 }}
@@ -98,7 +102,11 @@ const About = () => {
               {icons.map((items, index) => {
                 return (
                   <motion.li
-                    variants={fadeIn("left", items.duration)}
+                    variants={
+                      isMobile
+                        ? fadeIn("up", items.duration)
+                        : fadeIn("left", items.duration)
+                    }
                     initial="hidden"
                     whileInView={"show"}
                     whileHover={{

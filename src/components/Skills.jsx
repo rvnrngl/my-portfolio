@@ -12,6 +12,7 @@ import javaIcon from "../assets/icons/java.png";
 import pythonIcon from "../assets/icons/python.png";
 import gitIcon from "../assets/icons/git.png";
 import githubIcon from "../assets/icons/github.png";
+import { UseIsMobile } from "./UseIsMobile";
 
 const icons = [
   {
@@ -99,6 +100,7 @@ const skillsSet = [
 ];
 
 const Skills = () => {
+  const { isMobile } = UseIsMobile();
   return (
     <>
       <div className="w-screen relative">
@@ -111,7 +113,7 @@ const Skills = () => {
             <div className="grid lg:grid-cols-2 lg:place-items-center justify-center gap-12 lg:gap-4">
               {/* text */}
               <motion.div
-                variants={fadeIn("right", 0.3)}
+                variants={isMobile ? fadeIn("up", 0.3) : fadeIn("right", 0.3)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: true, amount: 0.3 }}
@@ -157,7 +159,11 @@ const Skills = () => {
                   {icons.map((items, index) => {
                     return (
                       <motion.li
-                        variants={fadeIn("right", items.duration)}
+                        variants={
+                          isMobile
+                            ? fadeIn("up", items.duration)
+                            : fadeIn("right", items.duration)
+                        }
                         initial="hidden"
                         whileInView={"show"}
                         whileHover={{
@@ -194,7 +200,11 @@ const Skills = () => {
                 {skillsSet.map((items, index) => {
                   return (
                     <motion.div
-                      variants={fadeIn("left", items.duration)}
+                      variants={
+                        isMobile
+                          ? fadeIn("up", 0.2)
+                          : fadeIn("left", items.duration)
+                      }
                       initial="hidden"
                       whileInView={"show"}
                       viewport={{ once: true, amount: 0.3 }}
