@@ -3,6 +3,7 @@ import { easeInOut, motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import { Link } from "react-scroll";
 import animeeshMockup from "../assets/mockups/animeesh-mockups.png";
+import youtubeCloneMockup from "../assets/mockups/youtubeclone-mockups.png";
 import colorFillMockup from "../assets/mockups/colorfill-mockups.png";
 import fashionStepMockup from "../assets/mockups/fashionstep-mockups.png";
 import todoListMockup from "../assets/mockups/todolist-mockups.png";
@@ -17,6 +18,7 @@ import pythonIcon from "../assets/icons/python.png";
 import cssIcon from "../assets/icons/css-3.png";
 import restIcon from "../assets/icons/rest-api-icon.png";
 import firebaseIcon from "../assets/icons/firebase.png";
+import typeScriptIcon from "../assets/icons/ts.png";
 import Cards from "./Cards";
 import { UseIsMobile } from "./UseIsMobile";
 
@@ -56,6 +58,10 @@ const icons = [
   {
     name: "Firebase",
     src: firebaseIcon,
+  },
+  {
+    name: "TypeScript",
+    src: typeScriptIcon,
   },
 ];
 
@@ -181,6 +187,18 @@ const Projects = () => {
               className="flex flex-col gap-y-10 max-w-[400px] lg:max-w-[500px]"
             >
               <Cards
+                name="Youtube Clone"
+                description="A youtube clone website using TypeScript."
+                src={youtubeCloneMockup}
+                srcPages="https://youtube-clone-six-silk.vercel.app/"
+                icons={getIcons([
+                  "HTML",
+                  "TypeScript",
+                  "React",
+                  "Tailwind CSS",
+                ])}
+              />
+              <Cards
                 name="Fashion Step"
                 description="A shoes shop webstite template."
                 src={fashionStepMockup}
@@ -191,13 +209,6 @@ const Projects = () => {
                   "React",
                   "Tailwind CSS",
                 ])}
-              />
-              <Cards
-                name="ColorFill"
-                description="An android app that simulates colorblindness."
-                src={colorFillMockup}
-                srcPages="https://github.com/rvnrngl/ColorFill-App"
-                icons={getIcons(["Java", "Python"])}
               />
             </motion.div>
           </div>
@@ -210,6 +221,21 @@ const Projects = () => {
                   : "hidden"
               }
             >
+              <motion.div
+                variants={isMobile ? fadeIn("up", 0.3) : fadeIn("left", 0.1)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: true, amount: 0.3 }}
+                className="col-span-2 lg:col-span-1 w-full max-w-[400px] lg:max-w-[500px]"
+              >
+                <Cards
+                  name="ColorFill"
+                  description="An android app that simulates colorblindness."
+                  src={colorFillMockup}
+                  srcPages="https://github.com/rvnrngl/ColorFill-App"
+                  icons={getIcons(["Java", "Python"])}
+                />
+              </motion.div>
               <motion.div
                 variants={isMobile ? fadeIn("up", 0.3) : fadeIn("left", 0.1)}
                 initial="hidden"
@@ -256,7 +282,7 @@ const Projects = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: true, amount: 0.3 }}
-                className="col-span-2"
+                className="col-span-2 lg:col-span-1"
               >
                 <Cards
                   name="Calculator"
