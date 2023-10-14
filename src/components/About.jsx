@@ -95,7 +95,7 @@ const About = () => {
               </span>
             </h2>
             <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mx-auto max-w-[400px] lg:max-w-[600px] font-medium lg:font-semibold mb-4">
-              I'm a Computer Science fresh graduate with background in Web
+              I'm a Computer Science fresh graduate with background in Software
               Development.
             </h3>
             <div className="mb-4 mx-auto lg:mx-0 gap-1 sm:gap-3 flex justify-center lg:justify-start items-center max-w-[400px] lg:max-w-[600px]">
