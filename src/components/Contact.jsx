@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { easeInOut, motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import emailjs from "@emailjs/browser";
@@ -7,15 +7,27 @@ import "react-toastify/dist/ReactToastify.css";
 import { UseIsMobile } from "./UseIsMobile";
 
 const Contact = () => {
+  const [formObject, setFormObject] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const { isMobile } = UseIsMobile();
   const SUCCESS = "success";
   const FAIL = "fail";
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 
-    emailjs
+    const validation = await formValidation();
+
+    if (!validation.isSuccess) {
+      notify(FAIL, validation.responseMessage);
+      return;
+    }
+
+    await emailjs
       .sendForm(
         "service_19tap3a",
         "template_ldq7oio",
@@ -24,20 +36,61 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
-          notify("success");
+          notify(SUCCESS, validation.responseMessage);
           e.target.reset();
         },
         (error) => {
           console.log(error.text);
-          notify("fail");
+          notify(FAIL, "An unexpected error occurred. Please try again later.");
         }
       );
   };
 
-  const notify = (res) => {
+  const formValidation = async () => {
+    const nameRegex = /^[^\W_0-9][A-Za-z\s]{2,}$/;
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+
+    // check if input fields are empty
+    if (
+      formObject.name === "" ||
+      formObject.email === "" ||
+      formObject.message === ""
+    ) {
+      return {
+        isSuccess: false,
+        responseMessage: "Please fill in all required fields.",
+      };
+    }
+
+    // check if name is not valid
+    // It should be 3 or more characters
+    // It should not start in special characters or white space
+    if (!nameRegex.test(formObject.name)) {
+      return {
+        isSuccess: false,
+        responseMessage:
+          "Username must be at least 3 characters long and should not start with special characters.",
+      };
+    }
+
+    // check if email is not valid
+    if (!emailRegex.test(formObject.email)) {
+      return {
+        isSuccess: false,
+        responseMessage: "Please enter a valid email address.",
+      };
+    }
+
+    // return true if its all valid
+    return {
+      isSuccess: true,
+      responseMessage: "Your email has been sent successfully.",
+    };
+  };
+
+  const notify = (res, message) => {
     if (res === SUCCESS) {
-      toast.success("Message sent!", {
+      toast.success(message, {
         position: "top-center",
         autoClose: 3000,
         transition: Slide,
@@ -46,10 +99,10 @@ const Contact = () => {
         pauseOnHover: false,
         draggable: false,
         progress: undefined,
-        theme: "dark",
+        theme: "colored",
       });
     } else if (res === FAIL) {
-      toast.error("Message not sent!", {
+      toast.error(message, {
         position: "top-center",
         autoClose: 3000,
         transition: Slide,
@@ -58,10 +111,11 @@ const Contact = () => {
         pauseOnHover: false,
         draggable: false,
         progress: undefined,
-        theme: "dark",
+        theme: "colored",
       });
     }
   };
+
   return (
     <>
       <div className="w-screen relative">
@@ -106,20 +160,41 @@ const Contact = () => {
                   className="w-full bg-transparent outline-none border-b p-2 border-paragraph/50 hover:border-headline focus:border-headline transition-all duration-300 mb-4"
                   type="text"
                   name="user_name"
+                  value={formObject.name}
                   placeholder="Your name"
+                  onChange={(event) =>
+                    setFormObject((prev) => ({
+                      ...prev,
+                      name: event.target.value,
+                    }))
+                  }
                 />
                 <input
                   className="w-full bg-transparent outline-none border-b p-2 border-paragraph/50 hover:border-headline focus:border-headline transition-all duration-300 mb-4"
                   type="email"
                   name="user_email"
+                  value={formObject.email}
                   placeholder="Your email"
+                  onChange={(event) =>
+                    setFormObject((prev) => ({
+                      ...prev,
+                      email: event.target.value,
+                    }))
+                  }
                 />
                 <textarea
                   className="w-full bg-transparent outline-none border-b p-2 border-paragraph/50 hover:border-headline focus:border-headline transition-all duration-300"
                   name="message"
+                  value={formObject.message}
                   cols={50}
                   rows={7}
                   placeholder="Your message..."
+                  onChange={(event) =>
+                    setFormObject((prev) => ({
+                      ...prev,
+                      message: event.target.value,
+                    }))
+                  }
                 ></textarea>
                 <input
                   type="submit"
