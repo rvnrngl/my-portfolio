@@ -9,6 +9,8 @@ import reactIcon from "../assets/icons/react.png";
 import tailWindIcon from "../assets/icons/tailwind.png";
 import viteIcon from "../assets/icons/vite.svg";
 import javaIcon from "../assets/icons/java.png";
+import nextIcon from "../assets/icons/nextjs.png";
+import mongoDBIcon from "../assets/icons/mongodb.png";
 import pythonIcon from "../assets/icons/python.png";
 import gitIcon from "../assets/icons/git.png";
 import githubIcon from "../assets/icons/github.png";
@@ -36,6 +38,10 @@ const icons = [
     duration: 0.1,
   },
   {
+    src: nextIcon,
+    duration: 0,
+  },
+  {
     src: viteIcon,
     duration: 0.5,
   },
@@ -55,6 +61,7 @@ const icons = [
     src: githubIcon,
     duration: 0.1,
   },
+  { src: mongoDBIcon, duration: 0 },
 ];
 
 const skillsSet = [
@@ -76,8 +83,8 @@ const skillsSet = [
   {
     name: "Frameworks/Libraries",
     duration: 0.3,
-    description: `I'm currently learning React and Tailwind, two powerful frameworks and libraries 
-        for web development. React allows me to build dynamic user interfaces, while Tailwind's 
+    description: `I'm currently learning NextJS and Typescript, two powerful frameworks and libraries 
+        for web development. NextJS allows me to build dynamic user interfaces, while Tailwind's 
         utility classes streamline the styling process, helping me create responsive and visually 
         appealing websites more efficiently.`,
   },
@@ -155,7 +162,7 @@ const Skills = () => {
                   applications that provide exceptional user experiences.
                 </h3>
                 {/* icons */}
-                <div className="grid grid-cols-5 gap-1 sm:gap-3 mx-auto lg:mx-0 w-fit mb-6">
+                <div className="grid grid-cols-6 gap-1 sm:gap-3 mx-auto lg:mx-0 w-fit mb-6">
                   {icons.map((items, index) => {
                     return (
                       <motion.li
@@ -176,7 +183,7 @@ const Skills = () => {
                         className="list-none group bg-btn-text-color w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] p-2 flex justify-center items-center rounded-md hover:z-[2]"
                       >
                         <img
-                          className=" mix-blend-luminosity group-hover:mix-blend-normal"
+                          className="mix-blend-luminosity group-hover:mix-blend-normal"
                           src={items.src}
                           alt={`img-${index}`}
                         />

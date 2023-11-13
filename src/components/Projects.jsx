@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { easeInOut, motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import { Link } from "react-scroll";
+import seenerMockup from "../assets/mockups/seener-mockups.jpg";
 import animeeshMockup from "../assets/mockups/animeesh-mockups.png";
 import youtubeCloneMockup from "../assets/mockups/youtubeclone-mockups.png";
 import colorFillMockup from "../assets/mockups/colorfill-mockups.png";
@@ -10,6 +11,8 @@ import todoListMockup from "../assets/mockups/todolist-mockups.png";
 import beshifyMockup from "../assets/mockups/beshify-mockups.png";
 import calculator from "../assets/projects/calculator.png";
 import reactIcon from "../assets/icons/react.png";
+import nextIcon from "../assets/icons/nextjs.png";
+import mongoDBIcon from "../assets/icons/mongodb.png";
 import tailWindIcon from "../assets/icons/tailwind.png";
 import htmlIcon from "../assets/icons/html-5.png";
 import jsIcon from "../assets/icons/js.png";
@@ -62,6 +65,14 @@ const icons = [
   {
     name: "TypeScript",
     src: typeScriptIcon,
+  },
+  {
+    name: "NextJS",
+    src: nextIcon,
+  },
+  {
+    name: "MongoDB",
+    src: mongoDBIcon,
   },
 ];
 
@@ -176,6 +187,7 @@ const Projects = () => {
                   "React",
                   "Tailwind CSS",
                   "REST",
+                  "MongoDB",
                 ])}
               />
             </motion.div>
@@ -187,6 +199,19 @@ const Projects = () => {
               className="flex flex-col gap-y-10 max-w-[400px] lg:max-w-[500px]"
             >
               <Cards
+                name="Seener"
+                description="A instant messaging or chat app"
+                src={seenerMockup}
+                srcPages="https://seener-j271asz2u-rvnrngl.vercel.app/"
+                icons={getIcons([
+                  "HTML",
+                  "TypeScript",
+                  "NextJS",
+                  "Tailwind CSS",
+                  "MongoDB",
+                ])}
+              />
+              <Cards
                 name="Youtube Clone"
                 description="A youtube clone website using TypeScript."
                 src={youtubeCloneMockup}
@@ -194,18 +219,6 @@ const Projects = () => {
                 icons={getIcons([
                   "HTML",
                   "TypeScript",
-                  "React",
-                  "Tailwind CSS",
-                ])}
-              />
-              <Cards
-                name="Fashion Step"
-                description="A shoes shop webstite template."
-                src={fashionStepMockup}
-                srcPages="https://rvnrngl.github.io/fashion-step-website/"
-                icons={getIcons([
-                  "HTML",
-                  "JavaScript",
                   "React",
                   "Tailwind CSS",
                 ])}
@@ -234,6 +247,26 @@ const Projects = () => {
                   src={colorFillMockup}
                   srcPages="https://github.com/rvnrngl/ColorFill-App"
                   icons={getIcons(["Java", "Python"])}
+                />
+              </motion.div>
+              <motion.div
+                variants={isMobile ? fadeIn("up", 0.3) : fadeIn("left", 0.1)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: true, amount: 0.3 }}
+                className="col-span-2 lg:col-span-1"
+              >
+                <Cards
+                  name="Fashion Step"
+                  description="A shoes shop webstite template."
+                  src={fashionStepMockup}
+                  srcPages="https://rvnrngl.github.io/fashion-step-website/"
+                  icons={getIcons([
+                    "HTML",
+                    "JavaScript",
+                    "React",
+                    "Tailwind CSS",
+                  ])}
                 />
               </motion.div>
               <motion.div
@@ -282,7 +315,7 @@ const Projects = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: true, amount: 0.3 }}
-                className="col-span-2 lg:col-span-1"
+                className="col-span-2 lg:col-span-2"
               >
                 <Cards
                   name="Calculator"
