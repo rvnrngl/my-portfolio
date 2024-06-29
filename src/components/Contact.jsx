@@ -12,6 +12,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const { isMobile } = UseIsMobile();
   const SUCCESS = "success";
   const FAIL = "fail";
@@ -19,6 +20,21 @@ const Contact = () => {
 
   const sendEmail = async (e) => {
     e.preventDefault();
+
+    if (isButtonDisabled) {
+      toast.info("Please wait 30 seconds before submitting again.", {
+        position: "top-right",
+        autoClose: 3000,
+        transition: Slide,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: "dark",
+      });
+      return;
+    }
 
     const validation = await formValidation();
 
@@ -38,6 +54,8 @@ const Contact = () => {
         (result) => {
           notify(SUCCESS, validation.responseMessage);
           e.target.reset();
+          setIsButtonDisabled(true);
+          setTimeout(() => setIsButtonDisabled(false), 30000);
         },
         (error) => {
           console.log(error.text);
@@ -91,27 +109,27 @@ const Contact = () => {
   const notify = (res, message) => {
     if (res === SUCCESS) {
       toast.success(message, {
-        position: "top-center",
+        position: "top-right",
         autoClose: 3000,
         transition: Slide,
-        hideProgressBar: false,
+        hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: false,
         draggable: false,
         progress: undefined,
-        theme: "colored",
+        theme: "dark",
       });
     } else if (res === FAIL) {
       toast.error(message, {
-        position: "top-center",
+        position: "top-right",
         autoClose: 3000,
         transition: Slide,
-        hideProgressBar: false,
+        hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: false,
         draggable: false,
         progress: undefined,
-        theme: "colored",
+        theme: "dark",
       });
     }
   };
@@ -196,12 +214,21 @@ const Contact = () => {
                     }))
                   }
                 ></textarea>
-                <input
-                  type="submit"
-                  value="Send message"
-                  className="bg-btn-color cursor-pointer text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
+                {isButtonDisabled ? (
+                  <button
+                    className="bg-[#e16162] cursor-not-allowed text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
+                  duration-200 ease-in mt-8"
+                  >
+                    Send Message
+                  </button>
+                ) : (
+                  <input
+                    type="submit"
+                    value="Send message"
+                    className="bg-btn-color cursor-pointer text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
                                mt-8 duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px] z-[2]"
-                />
+                  />
+                )}
               </motion.form>
             </div>
           </div>

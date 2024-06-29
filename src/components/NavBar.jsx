@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import { FaHome, FaUser, FaFire } from "react-icons/fa";
+import { FaHome, FaUser, FaFire, FaBriefcase } from "react-icons/fa";
 import { HiRectangleStack } from "react-icons/hi2";
 import { BiSolidMessageDots } from "react-icons/bi";
 
@@ -33,6 +33,16 @@ const NavBar = () => {
               className="cursor-pointer w-[40px] h-[40px] sm:w-[60px] lg:h-[60px] lg:hover:bg-paragraph/20 duration-300 ease-in-out rounded-full flex justify-center items-center"
             >
               <FaUser />
+            </Link>
+            <Link
+              activeClass="active"
+              to="experience"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="cursor-pointer w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] lg:hover:bg-paragraph/20 duration-300 ease-in-out rounded-full flex justify-center items-center"
+            >
+              <FaBriefcase />
             </Link>
             <Link
               activeClass="active"

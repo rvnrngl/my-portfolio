@@ -4,33 +4,50 @@ import { fadeIn } from "../variants";
 import { Link } from "react-scroll";
 import Gif from "../assets/imgAbout.gif";
 import Resume from "../assets/resumeAuthor.pdf";
-import htmlIcon from "../assets/icons/html-5.png";
-import cssIcon from "../assets/icons/css-3.png";
 import jsIcon from "../assets/icons/js.png";
 import reactIcon from "../assets/icons/react.png";
 import tailWindIcon from "../assets/icons/tailwind.png";
+import csharpIcon from "../assets/icons/csharp.png";
+import dotnetIcon from "../assets/icons/dotnet.png";
+import jqueryIcon from "../assets/icons/jquery.png";
+import bootstrapIcon from "../assets/icons/bootstrap.png";
 import { UseIsMobile } from "./UseIsMobile";
 
 const icons = [
   {
-    src: htmlIcon,
+    src: csharpIcon,
+    name: "c#",
     duration: 0.3,
   },
   {
-    src: cssIcon,
+    src: dotnetIcon,
+    name: "Dotnet",
     duration: 0.4,
   },
   {
     src: jsIcon,
+    name: "Javascript",
     duration: 0.5,
   },
   {
     src: reactIcon,
+    name: "ReactJS",
     duration: 0.6,
   },
   {
     src: tailWindIcon,
+    name: "Tailwind",
     duration: 0.7,
+  },
+  {
+    src: jqueryIcon,
+    name: "JQuery",
+    duration: 0.8,
+  },
+  {
+    src: bootstrapIcon,
+    name: "Bootstrap",
+    duration: 0.9,
   },
 ];
 
@@ -95,8 +112,8 @@ const About = () => {
               </span>
             </h2>
             <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mx-auto max-w-[400px] lg:max-w-[600px] font-medium lg:font-semibold mb-4">
-              I'm a Computer Science fresh graduate with background in Software
-              Development.
+              I'm a highly skilled Full-Stack developer with expertise in a wide
+              range of technologies.
             </h3>
             <div className="mb-4 mx-auto lg:mx-0 gap-1 sm:gap-3 flex justify-center lg:justify-start items-center max-w-[400px] lg:max-w-[600px]">
               {icons.map((items, index) => {
@@ -123,6 +140,14 @@ const About = () => {
                       src={items.src}
                       alt={`img-${index}`}
                     />
+                    {/* ToolTip start */}
+                    <span
+                      class="group-hover:opacity-100 group-hover:duration-900 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md absolute left-1/2 
+    -translate-x-1/2 translate-y-[45px] opacity-0 m-4 mx-auto"
+                    >
+                      {items.name}
+                    </span>
+                    {/* ToolTip End */}
                   </motion.li>
                 );
               })}

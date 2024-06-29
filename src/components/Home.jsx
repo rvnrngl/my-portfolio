@@ -133,9 +133,17 @@ const Home = () => {
                   viewport={{ once: true, amount: 0.5 }}
                   href="https://www.facebook.com/raven.ringel/"
                   target="_blank"
-                  className="hover:text-[#e16162] drop-shadow-none"
+                  className="hover:text-[#e16162] drop-shadow-none group"
                 >
                   <AiFillFacebook size={40} />
+                  {/* ToolTip start */}
+                  <span
+                    class="group-hover:opacity-100 group-hover:duration-900 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md absolute left-1/2 
+    -translate-x-1/2 -translate-y-1/2 opacity-0 m-4 mx-auto"
+                  >
+                    Facebook
+                  </span>
+                  {/* ToolTip End */}
                 </motion.a>
                 <motion.a
                   variants={fadeIn("up", 0.5)}
@@ -149,9 +157,16 @@ const Home = () => {
                   viewport={{ once: true, amount: 0.5 }}
                   href="https://www.linkedin.com/in/raven-ringel-34aa77273/"
                   target="_blank"
-                  className="hover:text-[#e16162] drop-shadow-none"
+                  className="hover:text-[#e16162] drop-shadow-none group"
                 >
                   <AiFillLinkedin size={40} />
+                  <span
+                    class="group-hover:opacity-100 group-hover:duration-900 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md absolute left-1/2 
+    -translate-x-1/2 -translate-y-1/2 opacity-0 m-4 mx-auto"
+                  >
+                    LinkedIn
+                  </span>
+                  {/* ToolTip End */}
                 </motion.a>
                 <motion.a
                   variants={fadeIn("up", 0.6)}
@@ -165,9 +180,16 @@ const Home = () => {
                   viewport={{ once: true, amount: 0.5 }}
                   href="https://twitter.com/Raven47261939"
                   target="_blank"
-                  className="hover:text-[#e16162] drop-shadow-none"
+                  className="hover:text-[#e16162] drop-shadow-none group"
                 >
                   <AiFillTwitterSquare size={40} />
+                  <span
+                    class="group-hover:opacity-100 group-hover:duration-900 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md absolute left-1/2 
+    -translate-x-1/2 -translate-y-1/2 opacity-0 m-4 mx-auto"
+                  >
+                    Twitter/X
+                  </span>
+                  {/* ToolTip End */}
                 </motion.a>
                 <motion.a
                   variants={fadeIn("up", 0.7)}
@@ -181,9 +203,16 @@ const Home = () => {
                   viewport={{ once: true, amount: 0.5 }}
                   href="https://github.com/rvnrngl"
                   target="_blank"
-                  className="hover:text-[#e16162] drop-shadow-none"
+                  className="hover:text-[#e16162] drop-shadow-none group"
                 >
                   <FaGithubSquare size={36.5} />
+                  <span
+                    class="group-hover:opacity-100 group-hover:duration-900 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md absolute left-1/2 
+    -translate-x-1/2 -translate-y-1/2 opacity-0 m-4 mx-auto"
+                  >
+                    Github
+                  </span>
+                  {/* ToolTip End */}
                 </motion.a>
               </div>
             </div>

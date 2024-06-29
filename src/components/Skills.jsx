@@ -110,12 +110,12 @@ const Skills = () => {
   const { isMobile } = UseIsMobile();
   return (
     <>
-      <div className="w-screen relative">
-        <div className="lg:opacity-90 opacity-50"></div>
-        <section
-          id="skills"
-          className="w-full max-w-[1240px] lg:h-screen py-8 mx-auto px-6 font-khand flex justify-center items-center"
-        >
+      <section
+        id="skills"
+        className="w-screen bg-paragraph text-bg-color relative"
+      >
+        <div className="lg:opacity-50 opacity-30"></div>
+        <div className="w-full max-w-[1240px] lg:min-h-screen py-8 mx-auto px-6 font-khand flex justify-between items-center">
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-2 lg:place-items-center justify-center gap-12 lg:gap-4">
               {/* text */}
@@ -156,7 +156,7 @@ const Skills = () => {
                     </h1>
                   </span>
                 </h2>
-                <h3 className="font-switzer text-paragraph w-full max-w-[500px] mb-4 text-justify text-lg sm:text-xl lg:text-left">
+                <h3 className="font-switzer text-btn-text-color w-full max-w-[500px] mb-4 text-justify text-lg sm:text-xl lg:text-left">
                   I have acquired skills in Front End development, allowing me
                   to create interactive user interfaces and build responsive web
                   applications that provide exceptional user experiences.
@@ -217,10 +217,10 @@ const Skills = () => {
                       viewport={{ once: true, amount: 0.3 }}
                       key={index}
                     >
-                      <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#e16162]">
+                      <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-btn-text-color">
                         {items.name}
                       </h1>
-                      <p className="font-switzer text-paragraph pb-3 text-justify text-lg sm:text-xl lg:text-left border-b border-paragraph border-opacity-50">
+                      <p className="font-switzer text-btn-text-color pb-3 text-justify text-lg sm:text-xl lg:text-left border-b border-paragraph border-opacity-50">
                         {items.description}
                       </p>
                     </motion.div>
@@ -229,8 +229,8 @@ const Skills = () => {
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 };

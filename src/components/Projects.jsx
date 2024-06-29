@@ -86,186 +86,109 @@ const Projects = () => {
   };
 
   return (
-    <section
-      id="projects"
-      className="w-screen bg-paragraph text-bg-color relative"
-    >
-      <div className="lg:opacity-50 opacity-30"></div>
-      <div className="w-full max-w-[1240px] lg:min-h-screen py-8 mx-auto px-6 font-khand flex justify-between items-center">
-        <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 place-items-center mb-10">
-            <motion.div
-              variants={isMobile ? fadeIn("up", 0.3) : fadeIn("right", 0.1)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: true, amount: 0.3 }}
-              className="flex-1 flex flex-col gap-y-10 mb-10 lg:mb-0 max-w-[400px] lg:max-w-[500px]"
-            >
-              {/* headlines */}
-              <div className="max-w-[400px] lg:max-w-[500px] h-[267.5px] flex flex-col justify-center items-start">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl text-btn-text-color font-semibold lg:font-bold uppercase leading-[1] mb-4 flex justify-center lg:justify-start items-center gap-1 lg:gap-2 cursor-default">
-                  <span className="inline-flex">
-                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
-                      M
-                    </h1>
-                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
-                      y
-                    </h1>
-                  </span>
-                  <span className="inline-flex">
-                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
-                      P
-                    </h1>
-                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
-                      r
-                    </h1>
-                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
-                      o
-                    </h1>
-                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
-                      j
-                    </h1>
-                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
-                      e
-                    </h1>
-                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
-                      c
-                    </h1>
-                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
-                      t
-                    </h1>
-                    <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
-                      s
-                    </h1>
-                  </span>
-                </h2>
-                <p className="font-switzer w-full mb-4 text-justify text-lg sm:text-xl lg:text-left">
-                  I have accumulated notable projects that showcase my skill in
-                  creating responsive websites with user-friendly interfaces and
-                  captivating user experiences.
-                </p>
-                <div className="flex justify-center lg:justify-start items-center gap-2 pb-4">
-                  {isHidden == false ? (
-                    <Link
-                      className="bg-btn-color cursor-pointer text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
+    <>
+      <div className="w-screen relative">
+        <div className="lg:opacity-90 opacity-50"></div>
+        <section
+          id="projects"
+          className="w-full max-w-[1240px] lg:min-h-screen py-8 mx-auto px-6 font-khand flex justify-between items-center"
+        >
+          <div className="container mx-auto">
+            <div className="grid lg:grid-cols-2 place-items-center mb-10">
+              <motion.div
+                variants={isMobile ? fadeIn("up", 0.3) : fadeIn("right", 0.1)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: true, amount: 0.3 }}
+                className="flex-1 flex flex-col gap-y-10 mb-10 lg:mb-0 max-w-[400px] lg:max-w-[500px]"
+              >
+                {/* headlines */}
+                <div className="max-w-[400px] lg:max-w-[500px] h-[267.5px] flex flex-col justify-center items-start">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl text-paragraph font-semibold lg:font-bold uppercase leading-[1] mb-4 flex justify-center lg:justify-start items-center gap-1 lg:gap-2 cursor-default">
+                    <span className="inline-flex">
+                      <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                        M
+                      </h1>
+                      <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                        y
+                      </h1>
+                    </span>
+                    <span className="inline-flex">
+                      <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                        P
+                      </h1>
+                      <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                        r
+                      </h1>
+                      <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                        o
+                      </h1>
+                      <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                        j
+                      </h1>
+                      <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                        e
+                      </h1>
+                      <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                        c
+                      </h1>
+                      <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                        t
+                      </h1>
+                      <h1 className="hover:text-[#e16162] duration-200 ease-in-out hover:-translate-y-1">
+                        s
+                      </h1>
+                    </span>
+                  </h2>
+                  <p className="font-switzer w-full mb-4 text-justify text-lg sm:text-xl lg:text-left">
+                    I have accumulated notable projects that showcase my skill
+                    in creating responsive websites with user-friendly
+                    interfaces and captivating user experiences.
+                  </p>
+                  <div className="flex justify-center lg:justify-start items-center gap-2 pb-4">
+                    {isHidden == false ? (
+                      <Link
+                        className="bg-btn-color cursor-pointer text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
                                 duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px] z-[2]"
-                      onClick={() => setIsHidden(true)}
-                      smooth={true}
-                      duration={500}
-                      to="otherProjects"
-                      offset={-70}
-                    >
-                      See more
-                    </Link>
-                  ) : (
-                    <button
-                      className="bg-[#e16162] cursor-not-allowed text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
+                        onClick={() => setIsHidden(true)}
+                        smooth={true}
+                        duration={500}
+                        to="otherProjects"
+                        offset={-70}
+                      >
+                        See more
+                      </Link>
+                    ) : (
+                      <button
+                        className="bg-[#e16162] cursor-not-allowed text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
                                 duration-200 ease-in"
+                      >
+                        See more
+                      </button>
+                    )}
+                    <a
+                      href="https://github.com/rvnrngl?tab=repositories"
+                      target="_blank"
+                      className="col-span-2 text-paragraph hover:bg-paragraph underline underline-offset-[12px] hover:no-underline text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
+                duration-200 ease-in hover:text-btn-text-color hover:shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px] z-[2]"
                     >
-                      See more
-                    </button>
-                  )}
-                  <a
-                    href="https://github.com/rvnrngl?tab=repositories"
-                    target="_blank"
-                    className="col-span-2 text-btn-text-color hover:bg-btn-text-color underline underline-offset-[12px] hover:no-underline text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
-                duration-200 ease-in hover:text-paragraph hover:shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px] z-[2]"
-                  >
-                    View all projects
-                  </a>
+                      View all projects
+                    </a>
+                  </div>
                 </div>
-              </div>
-              {/* projects card */}
-              <Cards
-                name="Animeesh"
-                description="A streaming anime website with up to date contents."
-                src={animeeshMockup}
-                srcPages="https://animeesh.vercel.app/"
-                icons={getIcons([
-                  "HTML",
-                  "JavaScript",
-                  "React",
-                  "Tailwind CSS",
-                  "REST",
-                  "MongoDB",
-                ])}
-              />
-            </motion.div>
-            <motion.div
-              variants={isMobile ? fadeIn("up", 0.3) : fadeIn("left", 0.1)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: true, amount: 0.3 }}
-              className="flex flex-col gap-y-10 max-w-[400px] lg:max-w-[500px]"
-            >
-              <Cards
-                name="Seener"
-                description="A instant messaging or chat app"
-                src={seenerMockup}
-                srcPages="https://seener-j271asz2u-rvnrngl.vercel.app/"
-                icons={getIcons([
-                  "HTML",
-                  "TypeScript",
-                  "NextJS",
-                  "Tailwind CSS",
-                  "MongoDB",
-                ])}
-              />
-              <Cards
-                name="Youtube Clone"
-                description="A youtube clone website using TypeScript."
-                src={youtubeCloneMockup}
-                srcPages="https://youtube-clone-six-silk.vercel.app/"
-                icons={getIcons([
-                  "HTML",
-                  "TypeScript",
-                  "React",
-                  "Tailwind CSS",
-                ])}
-              />
-            </motion.div>
-          </div>
-          {/* collapsible cards */}
-          <div id="otherProjects">
-            <div
-              className={
-                isHidden === true
-                  ? "grid lg:grid-cols-2 gap-y-10 place-items-center mx-auto mb-10"
-                  : "hidden"
-              }
-            >
-              <motion.div
-                variants={isMobile ? fadeIn("up", 0.3) : fadeIn("left", 0.1)}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{ once: true, amount: 0.3 }}
-                className="col-span-2 lg:col-span-1 w-full max-w-[400px] lg:max-w-[500px]"
-              >
+                {/* projects card */}
                 <Cards
-                  name="ColorFill"
-                  description="An android app that simulates colorblindness."
-                  src={colorFillMockup}
-                  srcPages="https://github.com/rvnrngl/ColorFill-App"
-                  icons={getIcons(["Java", "Python"])}
-                />
-              </motion.div>
-              <motion.div
-                variants={isMobile ? fadeIn("up", 0.3) : fadeIn("left", 0.1)}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{ once: true, amount: 0.3 }}
-                className="col-span-2 lg:col-span-1"
-              >
-                <Cards
-                  name="Fashion Step"
-                  description="A shoes shop webstite template."
-                  src={fashionStepMockup}
-                  srcPages="https://rvnrngl.github.io/fashion-step-website/"
+                  name="Animeesh"
+                  description="A streaming anime website with up to date contents."
+                  src={animeeshMockup}
+                  srcPages="https://animeesh.vercel.app/"
                   icons={getIcons([
                     "HTML",
                     "JavaScript",
                     "React",
                     "Tailwind CSS",
+                    "REST",
+                    "MongoDB",
                   ])}
                 />
               </motion.div>
@@ -274,81 +197,160 @@ const Projects = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: true, amount: 0.3 }}
-                className="col-span-2 lg:col-span-1"
+                className="flex flex-col gap-y-10 max-w-[400px] lg:max-w-[500px]"
               >
                 <Cards
-                  name="Todo List App"
-                  description="Simple todo list app using firebase."
-                  src={todoListMockup}
-                  srcPages="https://rvnrngl.github.io/todo-list-app/"
+                  name="Seener"
+                  description="A instant messaging or chat app"
+                  src={seenerMockup}
+                  srcPages="https://seener-j271asz2u-rvnrngl.vercel.app/"
                   icons={getIcons([
                     "HTML",
-                    "JavaScript",
-                    "React",
+                    "TypeScript",
+                    "NextJS",
                     "Tailwind CSS",
-                    "Firebase",
+                    "MongoDB",
                   ])}
                 />
-              </motion.div>
-              <motion.div
-                variants={isMobile ? fadeIn("up", 0.3) : fadeIn("left", 0.1)}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{ once: true, amount: 0.3 }}
-                className="col-span-2 lg:col-span-1"
-              >
                 <Cards
-                  name="Beshify App"
-                  description="An app that adds emoji in your text."
-                  src={beshifyMockup}
-                  srcPages="https://rvnrngl.github.io/beshify-app/"
+                  name="Youtube Clone"
+                  description="A youtube clone website using TypeScript."
+                  src={youtubeCloneMockup}
+                  srcPages="https://youtube-clone-six-silk.vercel.app/"
                   icons={getIcons([
                     "HTML",
-                    "JavaScript",
+                    "TypeScript",
                     "React",
                     "Tailwind CSS",
                   ])}
                 />
               </motion.div>
-              <motion.div
-                variants={isMobile ? fadeIn("up", 0.3) : fadeIn("left", 0.1)}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{ once: true, amount: 0.3 }}
-                className="col-span-2 lg:col-span-2"
-              >
-                <Cards
-                  name="Calculator"
-                  description="An Ios clone calculator app."
-                  src={calculator}
-                  srcPages="https://rvnrngl.github.io/simple-calculator/"
-                  icons={getIcons([
-                    "HTML",
-                    "JavaScript",
-                    "React",
-                    "Tailwind CSS",
-                  ])}
-                />
-              </motion.div>
-              <Link
-                to="projects"
-                smooth={true}
-                duration={500}
-                onClick={() =>
-                  setTimeout(() => {
-                    setIsHidden(false);
-                  }, 300)
+            </div>
+            {/* collapsible cards */}
+            <div id="otherProjects">
+              <div
+                className={
+                  isHidden === true
+                    ? "grid lg:grid-cols-2 gap-y-10 place-items-center mx-auto mb-10"
+                    : "hidden"
                 }
-                className=" col-span-2 cursor-pointer bg-btn-color text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
-                                duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px] z-[2]"
               >
-                View Less
-              </Link>
+                <motion.div
+                  variants={isMobile ? fadeIn("up", 0.3) : fadeIn("left", 0.1)}
+                  initial="hidden"
+                  whileInView={"show"}
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="col-span-2 lg:col-span-1 w-full max-w-[400px] lg:max-w-[500px]"
+                >
+                  <Cards
+                    name="ColorFill"
+                    description="An android app that simulates colorblindness."
+                    src={colorFillMockup}
+                    srcPages="https://github.com/rvnrngl/ColorFill-App"
+                    icons={getIcons(["Java", "Python"])}
+                  />
+                </motion.div>
+                <motion.div
+                  variants={isMobile ? fadeIn("up", 0.3) : fadeIn("left", 0.1)}
+                  initial="hidden"
+                  whileInView={"show"}
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="col-span-2 lg:col-span-1"
+                >
+                  <Cards
+                    name="Fashion Step"
+                    description="A shoes shop webstite template."
+                    src={fashionStepMockup}
+                    srcPages="https://rvnrngl.github.io/fashion-step-website/"
+                    icons={getIcons([
+                      "HTML",
+                      "JavaScript",
+                      "React",
+                      "Tailwind CSS",
+                    ])}
+                  />
+                </motion.div>
+                <motion.div
+                  variants={isMobile ? fadeIn("up", 0.3) : fadeIn("left", 0.1)}
+                  initial="hidden"
+                  whileInView={"show"}
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="col-span-2 lg:col-span-1"
+                >
+                  <Cards
+                    name="Todo List App"
+                    description="Simple todo list app using firebase."
+                    src={todoListMockup}
+                    srcPages="https://rvnrngl.github.io/todo-list-app/"
+                    icons={getIcons([
+                      "HTML",
+                      "JavaScript",
+                      "React",
+                      "Tailwind CSS",
+                      "Firebase",
+                    ])}
+                  />
+                </motion.div>
+                <motion.div
+                  variants={isMobile ? fadeIn("up", 0.3) : fadeIn("left", 0.1)}
+                  initial="hidden"
+                  whileInView={"show"}
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="col-span-2 lg:col-span-1"
+                >
+                  <Cards
+                    name="Beshify App"
+                    description="An app that adds emoji in your text."
+                    src={beshifyMockup}
+                    srcPages="https://rvnrngl.github.io/beshify-app/"
+                    icons={getIcons([
+                      "HTML",
+                      "JavaScript",
+                      "React",
+                      "Tailwind CSS",
+                    ])}
+                  />
+                </motion.div>
+                <motion.div
+                  variants={isMobile ? fadeIn("up", 0.3) : fadeIn("left", 0.1)}
+                  initial="hidden"
+                  whileInView={"show"}
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="col-span-2 lg:col-span-2"
+                >
+                  <Cards
+                    name="Calculator"
+                    description="An Ios clone calculator app."
+                    src={calculator}
+                    srcPages="https://rvnrngl.github.io/simple-calculator/"
+                    icons={getIcons([
+                      "HTML",
+                      "JavaScript",
+                      "React",
+                      "Tailwind CSS",
+                    ])}
+                  />
+                </motion.div>
+                <Link
+                  to="projects"
+                  smooth={true}
+                  duration={500}
+                  onClick={() =>
+                    setTimeout(() => {
+                      setIsHidden(false);
+                    }, 300)
+                  }
+                  className=" col-span-2 cursor-pointer bg-paragraph text-btn-text-color text-md sm:text-xl md:text-2xl font-khand font-semibold lg:font-bold rounded-sm p-2 
+                                duration-200 ease-in hover:drop-shadow-[5px_5px_0px_#000000] hover:translate-x-[-2px] z-[2]"
+                >
+                  View Less
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-    </section>
+    </>
   );
 };
 
