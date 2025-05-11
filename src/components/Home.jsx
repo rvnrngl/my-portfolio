@@ -155,7 +155,7 @@ const Home = () => {
                     filter: "drop-shadow(5px 5px 0px #000000)",
                   }}
                   viewport={{ once: true, amount: 0.5 }}
-                  href="https://www.linkedin.com/in/raven-ringel-34aa77273/"
+                  href="https://www.linkedin.com/in/rvn-rngl/"
                   target="_blank"
                   className="hover:text-[#e16162] drop-shadow-none group"
                 >

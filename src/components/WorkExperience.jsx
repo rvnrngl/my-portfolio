@@ -86,39 +86,62 @@ export const WorkExperience = () => {
                   color: "#e16162",
                 }}
                 icon={<FaBriefcase />}
-                date="2024 - present"
+                date="Aug 2024 - Present"
                 dateClassName="text-xl text-paragraph"
               >
                 <h3 className="text-btn-text-color text-3xl font-bold">
-                  Junior Full-Stack Developer
+                  Software Developer
+                </h3>
+                <h4 className="text-btn-text-color text-xl font-bold">
+                  Pacific Data Resources (Asia), Inc
+                </h4>
+                <ul className="list-disc text-btn-text-color text-lg pl-7">
+                  <li>
+                    Developed and maintained core features of the billing system.
+                  </li>
+                  <li>
+                    Maintained and supported Geographic Information System (GIS) platform.
+                  </li>
+                  <li>
+                    Designed and created reports using SQL Server Reporting Services (SSRS).
+                  </li>
+                  <li>
+                    Managed database migrations during system overhauls to ensure smooth transitions and data consistency.
+                  </li>
+                  <li>
+                    Deployed applications on-premises via IIS and performed system troubleshooting to ensure uptime and reliability.
+                  </li>
+                </ul>
+              </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className="vertical-timeline-element--work bg-transparent"
+                contentStyle={{ background: "#abd1c6" }}
+                iconStyle={{
+                  background: "#003140",
+                  color: "#e16162",
+                }}
+                icon={<FaBriefcase />}
+                date="Jan 2024 - June 2024"
+                dateClassName="text-xl text-paragraph"
+              >
+                <h3 className="text-btn-text-color text-3xl font-bold">
+                  Full-Stack Developer
                 </h3>
                 <h4 className="text-btn-text-color text-xl font-bold">
                   VCT Network and Data Solutions
                 </h4>
                 <ul className="list-disc text-btn-text-color text-lg pl-7">
                   <li>
-                    Trusted by the company and development supervisor to
-                    independently manage and develop a project.
+                    Developed and maintained an automated SMS blast system.
                   </li>
                   <li>
-                    Collaborated with QA and development supervisor to identify
-                    bugs, integrate features, and deploy updates.
+                    Collaborated on maintaining and enhancing the LMS platform.
                   </li>
                   <li>
-                    Coordinated with external developers to integrate third
-                    party API in our project.
-                  </li>
-                  <li>Documented the project’s API technical documentation.</li>
-                  <li>
-                    Participated in strategy sessions and contributing
-                    suggestions.
+                    Authored technical API documentation for internal and external use.
                   </li>
                   <li>
-                    Created queries and stored procedures to optimize database
-                    performance and data retrieval.
-                  </li>
-                  <li>
-                    Exposed to multiple projects in a fast-paced environment
+                    Integrated third-party APIs to extend system capabilities.
                   </li>
                 </ul>
               </VerticalTimelineElement>
